@@ -1,0 +1,14 @@
+name: "mms"
+author: "M&MS"
+output_dir: "docs"
+output:
+  html_document:
+    self_contained: no
+    theme: flatly
+    css: style.css
+navbar:
+  title: "Methodology & Meta-science"
+  left:
+    - text: "GUPsych"
+      icon: fa-home
+      href: /

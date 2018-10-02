@@ -1,0 +1,34 @@
+---
+title: ""
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(echo = FALSE)
+library(dplyr)
+```
+
+<br><br>
+Methodology & Metascience is a working group at the Institute of Neuroscience and Psychology at the University of Glasgow. You can find our schedule and materials at this website (which will be updated to a fancier blogdown site soon).
+
+Our regular meetings will be Wednesday afternoons from 2pm-3pm in 605 (aka Meeting room), except for Oct 3, Nov 7 and Dec 5, which will take place in 529/551  at 62 Hillhead St (aka "Seminar" room). In addition to talks, we will also be running some training events that we planned in our spring brainstorming meeting. If you would like to present or run a training workshop, please let [Dale](mailto://dale.barr@glasgow.ac.uk) know!
+
+### Schedule
+
+```{r, results='asis'}
+
+rss <- readLines("https://samoa.dcs.gla.ac.uk/events/rest/Feed/rss/141")
+
+schedule <- tibble::tribble(
+  ~Date, ~Speaker, ~speaker_link, ~Title, ~Time, ~Room,
+  "2018-10-03", "Christoph Schild", "https://twitter.com/schildchristoph", "Introduction to the [formr](https://formr.org/) survey framework in R", "15:00-16:00", "Seminar Room 529/551",
+  "2018-11-07", "Jessica Flake", "https://www.jessicakayflake.com/", "The Fundamental Role of Construct Validity in Original and Replicated Research", "14:00-15:30", "Seminar Room 529/551"
+)
+
+schedule %>%
+  mutate(Speaker = paste0("[", Speaker, "](", speaker_link,")")) %>%
+  select(-speaker_link) %>%
+  knitr::kable()
+
+```
+
+
