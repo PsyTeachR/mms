@@ -12,6 +12,8 @@ Methodology & Metascience is a working group at the Institute of Neuroscience an
 
 Our regular meetings will be Wednesday afternoons from 2pm-3pm in 605 (aka Meeting room), except for Oct 3, Nov 7 and Dec 5, which will take place in 529/551  at 62 Hillhead St (aka "Seminar" room). In addition to talks, we will also be running some training events that we planned in our spring brainstorming meeting. If you would like to present or run a training workshop, please let [Dale](mailto://dale.barr@glasgow.ac.uk) know!
 
+This site is still under construction; for an up to date list of talks, please see [http://www.psy.gla.ac.uk/events/index.php?sub=12](http://www.psy.gla.ac.uk/events/index.php?sub=12).
+
 ### Schedule
 
 ```{r, results='asis'}
@@ -21,6 +23,12 @@ rss <- readLines("https://samoa.dcs.gla.ac.uk/events/rest/Feed/rss/141")
 schedule <- tibble::tribble(
   ~Date, ~Speaker, ~speaker_link, ~Title, ~Time, ~Room,
   "2018-10-03", "Christoph Schild", "https://twitter.com/schildchristoph", "Introduction to the [formr](https://formr.org/) survey framework in R", "15:00-16:00", "Seminar Room 529/551",
+  "2018-10-10", "Dale Barr", "https://twitter.com/dalejbarr", 
+  "Mixed-effects modeling of temporal autocorrelation: Keep it minimal",
+  "14:00-15:00", "Meeting Room 605",
+  "2018-10-24", "Ben Jones", "https://twitter.com/Ben_C_J",
+  "Writing Registered Reports [(slides)](slides/2018_10_24_Ben_Jones.pdf)",
+  "14:00-15:00", "Seminar Room 529/551",
   "2018-11-07", "Jessica Flake", "https://www.jessicakayflake.com/", "The Fundamental Role of Construct Validity in Original and Replicated Research", "14:00-15:30", "Seminar Room 529/551"
 )
 
