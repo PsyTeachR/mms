@@ -55,9 +55,13 @@ schedule <- tibble::tribble(
     "The Situated Assessment Method (SAM^2): A new approach to measuring, understanding, and predicting health behaviours",
     "14:00-15:00", "Meeting Room 605",
   
-  "2018-12-05", "Jack Taylor", "",
-    "The BLOPS Word Generator: A Web App for Stimulus Generation in Psycholinguistics",
-    "14:00-15:00", "Meeting Room 605"
+  "2018-12-05", "Jack Taylor", "https://github.com/Jack-Tay",
+    "The [LexOPS](https://github.com/Jack-Tay/LexOPS) Word Generator: A Web App for Stimulus Generation in Psycholinguistics",
+    "14:00-15:00", "Meeting Room 605",
+  
+  "2018-12-12", "Dale Barr", "https://github.com/dalejbarr",
+    "The exams package",
+    "13:00-14:00", "Meeting Room 605"
 )
 
 schedule %>%
