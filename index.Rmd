@@ -43,25 +43,36 @@ schedule <- tibble::tribble(
     "14:00-15:30", "Seminar Room 529/551",
 
     "2018-11-14", "Martin Lages", "https://www.gla.ac.uk/schools/psychology/staff/martinlages/#/",
-    "TBC",
+    "Spot the celebrity lookalike!",
     "14:00-15:00", "Meeting Room 605",
 
   "2018-11-21", "Robin Ince", "http://www.robinince.net/", 
-    "Correcting for Multiple Comparisons",
+    "The Problem of Multiple Comparisons in Neuroimaging",
     "14:00-15:00", "Meeting Room 605",
-  
   
   "2018-11-28", "Larry Barsalou", "http://barsaloulab.org/",
     "The Situated Assessment Method (SAM^2): A new approach to measuring, understanding, and predicting health behaviours",
     "14:00-15:00", "Meeting Room 605",
   
   "2018-12-05", "Jack Taylor", "https://github.com/Jack-Tay",
-    "The [LexOPS](https://github.com/Jack-Tay/LexOPS) Word Generator: A Web App for Stimulus Generation in Psycholinguistics",
+    "[LexOPS](https://github.com/Jack-Tay/LexOPS): A Web App for Stimulus Generation in Psycholinguistics",
     "14:00-15:00", "Meeting Room 605",
   
-  "2018-12-12", "Dale Barr", "https://github.com/dalejbarr",
-    "The exams package",
-    "13:00-14:00", "Meeting Room 605"
+  "2018-12-12", "Dale Barr", "https://twitter.com/dalejbarr",
+    "Randomizing and automating assessment with the R exams package",
+    "13:00-14:00", "Meeting Room 605",
+  
+  "2019-02-06", "Lisa DeBruine", "https://twitter.com/lisadebruine",
+    "Discussion prep for Friday seminar (by Daniël Lakens) Readings: [Equivalence Tests](https://doi.org/10.1177/1948550617697177) & [Equivalence Testing for Psychological Research](https://doi.org/10.1177/2515245918770963)",
+    "14:00-15:00", "Meeting Room 605",
+  
+  "2019-02-08", "Daniël Lakens", "https://twitter.com/lakens",
+    "Equivalence Testing (title TBA)",
+    "15:30-16:30", "Seminar Room 529/551",
+
+  "2019-04-24", "Alex Jones", "",
+    "Title TBA",
+    "14:00-15:00", "Meeting Room 605"
 )
 
 schedule %>%
