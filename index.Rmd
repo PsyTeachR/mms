@@ -63,15 +63,15 @@ schedule <- tibble::tribble(
     "13:00-14:00", "Meeting Room 605",
   
   "2019-02-06", "Lisa DeBruine", "https://twitter.com/lisadebruine",
-    "Discussion prep for Friday seminar (by Daniël Lakens) Readings: [Equivalence Tests](https://doi.org/10.1177/1948550617697177) & [Equivalence Testing for Psychological Research](https://doi.org/10.1177/2515245918770963)",
+    "Discussion prep for Friday seminar (by Daniël Lakens)<br>Readings: [Equivalence Testing for Psychological Research](https://doi.org/10.1177/2515245918770963) & [Justify Your Alpha](https://psyarxiv.com/9s3y6/) (+[related blog post](http://daniellakens.blogspot.com/2018/12/testing-whether-observed-data-should.html))",
     "14:00-15:00", "Meeting Room 605",
   
   "2019-02-08", "Daniël Lakens", "https://twitter.com/lakens",
-    "Equivalence Testing (title TBA)",
+    "Justify Everything (title TBA)",
     "15:30-16:30", "Seminar Room 529/551",
 
-  "2019-04-24", "Alex Jones", "",
-    "Title TBA",
+  "2019-04-24", "Alex Jones", "https://twitter.com/AlexJonesPhD",
+    "Something about faces? (title TBA)",
     "14:00-15:00", "Meeting Room 605"
 )
 
