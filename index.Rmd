@@ -59,7 +59,7 @@ schedule <- tibble::tribble(
     "14:00-15:00", "Meeting Room 605",
   
   "2018-12-12", "Dale Barr", "https://twitter.com/dalejbarr",
-    "Randomizing and automating assessment with the R exams package",
+    "Randomizing and automating assessment with the [R exams](http://www.r-exams.org) package [(slides)](slides/r-exams.pdf)",
     "13:00-14:00", "Meeting Room 605",
   
   "2019-02-06", "Lisa DeBruine", "https://twitter.com/lisadebruine",
