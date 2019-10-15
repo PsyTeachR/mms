@@ -12,7 +12,7 @@ Methodology & Metascience is a working group at the Institute of Neuroscience an
 
 Our regular meetings are Wednesday afternoons from 2pm-3pm in 605 (aka Meeting room) or 529/551 at 62 Hillhead St (aka "Seminar" room) or Room 520 (Computer Lab) in the Boyd Orr. In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Dale](mailto://dale.barr@glasgow.ac.uk) know!
 
-For an up to date list of talks, please see [the events list](http://www.psy.gla.ac.uk/events/index.php?sub=12).
+For an up-to-date list of talks, please see [the events list](http://www.psy.gla.ac.uk/events/index.php?sub=12).
 
 ### Schedule
 
@@ -67,17 +67,35 @@ schedule <- tibble::tribble(
     "14:00-15:00", "Meeting Room 605",
   
   "2019-02-08", "Daniël Lakens", "https://twitter.com/lakens",
-    "Justify Everything (title TBA)",
+    "[Justify Everything](https://osf.io/j4s3c/)",
     "15:30-16:30", "Seminar Room 529/551",
 
   "2019-06-12", "Christoph Scheepers and Dale Barr", "",
     "Mixed-Effects Models Q&A [(Christoph's materials on ordinal logistic regression)](slides/Scheepers_Ordinal_Slides_and_Data.zip)",
-    "14:00-15:00", "Seminar Room 529/511"
+    "14:00-15:00", "Seminar Room 529/511",
+  
+  "2019-09-24", "Jack Taylor and Lisa DeBruine", "https://twitter.com/JackEdTaylor",
+  "[R Shiny Afternoon](https://psyteachr.github.io/shiny-tutorials/)", 
+  "13:00-17:00", "Seminar Room 529/511",
+  
+  "2019-10-02", "Carolyn Saund", "http://carolynsaund.me/",
+  "[Crowdsourcing: The Good, The Bad, and The Ugly](https://github.com/csaund/presentations/blob/master/crowdsourcing_pres.pdf)",
+  "14:00-15:00", "Seminar Room 529/511",
+
+  
+  "2019-10-09", "Benedict Jones", "https://twitter.com/Ben_C_J",
+  "[Introducing p curve](https://osf.io/d3zea/)", 
+  "14:00-15:00", "Seminar Room 529/511",
+  
+  "2019-10-18", "Anne Scheel", "https://www.tue.nl/en/our-university/departments/industrial-engineering-innovation-sciences/the-department/staff/detail/ep/e/d/ep-uid/20176208/",
+  "Is Hypothesis Testing Overused in Psychology?",
+  "12:00-13:00", "Seminar Room 529/511"
 )
 
 schedule %>%
   mutate(Speaker = paste0("[", Speaker, "](", speaker_link,")")) %>%
   select(-speaker_link) %>%
+  arrange(rev(Date)) %>%
   knitr::kable()
 
 ```
