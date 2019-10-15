@@ -55,7 +55,7 @@ schedule <- tibble::tribble(
     "14:00-15:00", "Meeting Room 605",
   
   "2018-12-05", "Jack Taylor", "https://github.com/Jack-Tay",
-    "[LexOPS](https://github.com/Jack-Tay/LexOPS): A Web App for Stimulus Generation in Psycholinguistics",
+    "LexOPS: A Web App for Stimulus Generation in Psycholinguistics ([github](https://github.com/Jack-Tay/LexOPS))",
     "14:00-15:00", "Meeting Room 605",
   
   "2018-12-12", "Dale Barr", "https://twitter.com/dalejbarr",
@@ -67,29 +67,51 @@ schedule <- tibble::tribble(
     "14:00-15:00", "Meeting Room 605",
   
   "2019-02-08", "Daniël Lakens", "https://twitter.com/lakens",
-    "[Justify Everything](https://osf.io/j4s3c/)",
+    "Justify Everything ([slides](https://osf.io/j4s3c/))",
     "15:30-16:30", "Seminar Room 529/551",
 
-  "2019-06-12", "Christoph Scheepers and Dale Barr", "",
+  "2019-06-12", "Christoph Scheepers and Dale Barr", "https://www.gla.ac.uk/researchinstitutes/neurosciencepsychology/staff/christophscheepers/",
     "Mixed-Effects Models Q&A [(Christoph's materials on ordinal logistic regression)](slides/Scheepers_Ordinal_Slides_and_Data.zip)",
     "14:00-15:00", "Seminar Room 529/511",
   
   "2019-09-24", "Jack Taylor and Lisa DeBruine", "https://twitter.com/JackEdTaylor",
-  "[R Shiny Afternoon](https://psyteachr.github.io/shiny-tutorials/)", 
+  "R Shiny Afternoon ([tutorial](https://psyteachr.github.io/shiny-tutorials/))", 
   "13:00-17:00", "Seminar Room 529/511",
   
   "2019-10-02", "Carolyn Saund", "http://carolynsaund.me/",
-  "[Crowdsourcing: The Good, The Bad, and The Ugly](https://github.com/csaund/presentations/blob/master/crowdsourcing_pres.pdf)",
+  "Crowdsourcing: The Good, The Bad, and The Ugly ([slides](https://github.com/csaund/presentations/blob/master/crowdsourcing_pres.pdf))",
   "14:00-15:00", "Seminar Room 529/511",
 
   
   "2019-10-09", "Benedict Jones", "https://twitter.com/Ben_C_J",
-  "[Introducing p curve](https://osf.io/d3zea/)", 
+  "Introducing p curve ([slides](https://osf.io/d3zea/))", 
   "14:00-15:00", "Seminar Room 529/511",
   
   "2019-10-18", "Anne Scheel", "https://www.tue.nl/en/our-university/departments/industrial-engineering-innovation-sciences/the-department/staff/detail/ep/e/d/ep-uid/20176208/",
   "Is Hypothesis Testing Overused in Psychology?",
-  "12:00-13:00", "Seminar Room 529/511"
+  "12:00-13:00", "Seminar Room 529/511",
+  
+  "2019-10-22", "Jo Neary and Kathryn Machray", "https://twitter.com/joanne_neary",
+  "Take a picture, it'll last longer: Practical and ethical considerations on using visual methods in qualitative research",
+  "14:00-15:00", "Seminar Room 529/511",
+  
+  "2019-10-29", "Andrew Burns", "https://www.gla.ac.uk/schools/socialpolitical/research/students/andrewburns/", 
+  "Qualitative data – reaching the parts that statistics can’t?",
+  "12:00-13:00", "Seminar Room 529/511",
+  
+  "2019-11-13", "Dale Barr", "https://twitter.com/dalejbarr",
+  "Containerize your code: Creating reproducible software environments",
+  "14:00-15:00", "Seminar Room 529/511",
+
+  "2020-01-21", "Eiko Fried", "http://www.eiko-fried.com/",
+  "What are psychological constructs and how best to model them?",
+  "14:00-15:00", "Seminar Room 529/511",
+  
+  "2020-01-22", "Zoltan Dienes", "http://www.lifesci.sussex.ac.uk/home/Zoltan_Dienes/",
+  "TBA", 
+  "14:00-15:00", "Seminar Room 529/511"
+
+
 )
 
 schedule %>%
