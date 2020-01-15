@@ -8,7 +8,7 @@ library(dplyr)
 ```
 
 <br><br>
-Methodology & Metascience is a working group at the Institute of Neuroscience and Psychology at the University of Glasgow. You can find our schedule and materials at this website.
+Methods & Metascience is a working group at the Institute of Neuroscience and Psychology at the University of Glasgow. You can find our schedule and materials at this website.
 
 Our regular meetings are Wednesday afternoons from 2pm-3pm in 605 (aka Meeting room) or 529/551 at 62 Hillhead St (aka "Seminar" room) or Room 520 (Computer Lab) in the Boyd Orr. In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Dale](mailto://dale.barr@glasgow.ac.uk) know!
 
@@ -61,7 +61,7 @@ schedule <- tibble::tribble(
   "2018-12-12", "Dale Barr", "https://twitter.com/dalejbarr",
     "Randomizing and automating assessment with the [R exams](http://www.r-exams.org) package [(slides)](slides/r-exams.pdf)",
     "13:00-14:00", "Meeting Room 605",
-  
+
   "2019-02-06", "Lisa DeBruine", "https://twitter.com/lisadebruine",
     "Discussion prep for Friday seminar (by Daniël Lakens)<br>Readings: [Equivalence Testing for Psychological Research](https://doi.org/10.1177/2515245918770963) & [Justify Your Alpha](https://psyarxiv.com/9s3y6/) (+[related blog post](http://daniellakens.blogspot.com/2018/12/testing-whether-observed-data-should.html))",
     "14:00-15:00", "Meeting Room 605",
@@ -103,15 +103,17 @@ schedule <- tibble::tribble(
   "Containerize your code: Creating reproducible software environments",
   "14:00-15:00", "Seminar Room 529/511",
 
-  "2020-01-21", "Eiko Fried", "http://www.eiko-fried.com/",
-  "What are psychological constructs and how best to model them?",
+  "2020-01-08", "Discussion of Yarkoni (2019)", "",
+  "Is there a generalizability crisis in psychology and neuroscience?",
+  "14:00-15:00", "Seminar Room 529/511",
+
+  "2020-01-15", "Guillaume Rousselet", "https://twitter.com/robustgar",
+  "Why interactions are difficult to interpret and many are simply uninterpretable ([slides](slides/rousselet_interactions.pdf))",
   "14:00-15:00", "Seminar Room 529/511",
   
   "2020-01-22", "Zoltan Dienes", "http://www.lifesci.sussex.ac.uk/home/Zoltan_Dienes/",
-  "TBA", 
+  "How to obtain evidence for the null hypothesis", 
   "14:00-15:00", "Seminar Room 529/511"
-
-
 )
 
 schedule %>%
