@@ -113,8 +113,21 @@ schedule <- tibble::tribble(
   
   "2020-01-22", "Zoltan Dienes", "http://www.lifesci.sussex.ac.uk/home/Zoltan_Dienes/",
   "How to obtain evidence for the null hypothesis", 
+  "14:00-15:00", "Seminar Room 529/511",
+
+  "2020-01-28", "Lisa DeBruine", "https://twitter.com/LisaDeBruine",
+  "R Workshop, part 1: Introduction to Data Simulation [(materials)](https://osf.io/xpskm/)",
+  "13:00-14:30", "Boyd Orr 603",
+
+  "2020-02-05", "Lisa DeBruine", "https://twitter.com/LisaDeBruine",
+  "R Workshop, part 2: Understanding Mixed-Effects Models Through Data Simulation [(materials)](https://osf.io/xpskm/)",
+  "13:00-14:30", "Boyd Orr 603",
+  
+  "2020-02-19", "Ruud Hortensius", "https://twitter.com/RuudHortensius",
+  "Tools for Reproducible fMRI Analysis [(materials)](https://osf.io/c28jq/) [(slides PDF)](slides/hortensius_fMRI_tools.pdf)",
   "14:00-15:00", "Seminar Room 529/511"
 )
+
 
 schedule %>%
   mutate(Speaker = paste0("[", Speaker, "](", speaker_link,")")) %>%
