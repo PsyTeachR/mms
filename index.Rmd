@@ -100,7 +100,7 @@ schedule <- tibble::tribble(
   "12:00-13:00", "Seminar Room 529/511",
   
   "2019-11-13", "Dale Barr", "https://twitter.com/dalejbarr",
-  "Containerize your code: Creating reproducible software environments",
+  "Containerize your code: Creating reproducible software environments [(slides)](barr_container/index.html)",
   "14:00-15:00", "Seminar Room 529/511",
 
   "2020-01-08", "Discussion of Yarkoni (2019)", "",

@@ -1,0 +1,154 @@
+#+SETUPFILE: setup.org
+#+TITLE: Containerize your code
+#+AUTHOR: Dale Barr
+#+DATE: M&Ms Nov 13, 2019
+#+PROPERTY: header-args:R :session *R*
+
+#+begin_src R :exports none
+  options(crayon.enabled = FALSE, tidyverse.quiet = TRUE)
+#+end_src
+
+* 
+I can't reproduce your results on my machine
+
+I can't even reproduce my own results on my own machine a few months later
+
+- Code runs, but results differ
+- Code won't run at all
+
+/Software infrastructure is unreliable across users, across machines, across time/
+
+* Illustration
+
+#+begin_src R :exports both :results output
+  library("lme4")
+
+  set.seed(62)
+
+  rnorm(5)
+  ## load data, fit model, etc...
+#+end_src
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 50%">
+*Me (2019)*
+
+- Ubuntu Linux 18.04
+- R 3.6.0
+- lme4 1.1-21
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 50%">
+*Someone else (2019)*
+
+- macOS 10.14
+- R 3.5.1
+- lme4 1.1-17
+#+REVEAL_HTML: </div>
+
+* Dependency hell
+  :PROPERTIES:
+  :header-args:R: :session *R2*
+  :END:
+
+#+begin_src R :exports none
+  suppressPackageStartupMessages(library("lme4"))
+#+end_src
+
+#+begin_src R :exports both :results output
+  library("lme4")
+  sessionInfo()
+#+end_src
+
+* Containers
+
+#+begin_quote
+/A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another./
+#+end_quote
+
+[[https://www.docker.com/resources/what-container][docker.com]]
+
+
+* Container image
+
+#+begin_quote
+A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
+#+end_quote
+
+[[https://www.docker.com/resources/what-container][docker.com]]
+
+- a /container/ is an /instance/ of an /image/
+
+* Potential downsides
+
+- Requires command-line expertise (BUT see cloud-based solutions e.g. Binder)
+- Docker installation cumbersome on some platforms (Windows)
+- Tricky to manage user permissions for accessing
+  files/folders/resources from inside the container
+- Will the Docker daemon/Dockerhub still be around in 2020? 2025?
+  2050?
+
+* Basic commands
+
+#+begin_example
+docker --help
+docker image --help               # get help about images
+docker container --help           # get help about containers
+
+docker image ls                   # list images
+docker container ls               # list containers
+
+docker run -it --rm imagename     # create instance from image
+
+docker run -it --rm \             # map to local volume
+       -v /Users/Me:/home/user/work imagename
+
+docker build -t imagename .       # build image using Dockerfile
+
+docker push imagename[:tag]       # push image to repository
+#+end_example
+
+* A few examples
+
+1. docker "hello-world"
+2. estimating a linear-mixed effects model in Julia via R
+3. fully reproducible data analysis and manuscript for 3 experiments
+
+* Some tips
+
+- Develop your analysis inside a container /from the beginning/
+- Don't rely solely on a Docker image
+  - keep your data outside the image
+  - provide multiple 'entry-points' for reproduction
+- Want to learn more about automating analyses in R? Check out =drake=:
+  - https://books.ropensci.org/drake
+- Have a look at cloud-based services (esp. Binder)
+
+* 
+
+#+REVEAL_HTML: <div class="column" style="float:left; width: 60%">
+
+[[file:nature.png]]
+
+#+begin_smaller
+https://www.nature.com/articles/d41586-019-03366-x
+#+end_smaller
+
+#+REVEAL_HTML: </div>
+
+#+REVEAL_HTML: <div class="column" style="float:right; width: 40%">
+
+Cloud-based services
+- Binder
+- Code Ocean
+- Colaboratory
+- Gigantum
+- NextJournal
+
+#+REVEAL_HTML: </div>
+
+* Resources
+
+- ROpenSciLabs, [[https://ropenscilabs.github.io/r-docker-tutorial/][A Docker tutorial for reproducible research]].
+- [[https://karthik.github.io/holepunch/][Karthik Ram's =holepunch= package for R]]
+- Marwick, Boettiger, & Mullen (2018). [[https://peerj.com/preprints/3192/][Packaging data analytical work reproducibly using R (and friends)]]. /PeerJ preprint/.
+
