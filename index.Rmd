@@ -40,7 +40,7 @@ schedule <- tibble::tribble(
     "14:00-15:00", "Seminar Room 529/551", "",
 
   "2018-10-31", "Lisa DeBruine", "https://twitter.com/lisadebruine",
-    "Your First Shiny App [(tutorial)](https://debruine.github.io/shiny-tutorials/)",
+    "Your First Shiny App [(tutorial)](https://psyteachr.github.io/shiny-tutorials/01-first-app.html)",
     "14:00-15:00", "Boyd Orr Computer Lab Room 520", "",
 
   "2018-11-07", "Jessica Flake", "https://www.jessicakayflake.com/", 
