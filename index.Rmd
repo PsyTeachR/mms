@@ -112,7 +112,7 @@ schedule <- tibble::tribble(
   "14:00-15:00", "Seminar Room 529/511",
   
   "2020-01-22", "Zoltan Dienes", "http://www.lifesci.sussex.ac.uk/home/Zoltan_Dienes/",
-  "How to obtain evidence for the null hypothesis", 
+  "How to obtain evidence for the null hypothesis [paper](https://doi.org/10.1177/2515245919876960)", 
   "14:00-15:00", "Seminar Room 529/511",
 
   "2020-01-28", "Lisa DeBruine", "https://twitter.com/LisaDeBruine",
