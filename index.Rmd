@@ -5,7 +5,12 @@ title: ""
 ```{r setup, include=F}
 knitr::opts_chunk$set(echo = FALSE)
 library(dplyr)
+library(kableExtra)
 ```
+
+<style>
+  .abstract { padding-top: 1em; display: none; }
+</style>
 
 <br><br>
 Methods & Metascience is a working group at the Institute of Neuroscience and Psychology at the University of Glasgow. You can find our schedule and materials at this website.
@@ -21,7 +26,7 @@ For an up-to-date list of talks, please see [the events list](http://www.psy.gla
 rss <- readLines("https://samoa.dcs.gla.ac.uk/events/rest/Feed/rss/141")
 
 schedule <- tibble::tribble(
-  ~Date, ~Speaker, ~speaker_link, ~Title, ~Time, ~Room, ~Abstract
+  ~Date, ~Speaker, ~speaker_link, ~Title, ~Time, ~Room, ~Abstract,
   "2018-10-03", "Christoph Schild", "https://twitter.com/schildchristoph", 
     "Introduction to the [formr](https://formr.org/) survey framework in R [(slides)](https://osf.io/gu23h/)", 
     "15:00-16:00", "Seminar Room 529/551", "",
@@ -112,7 +117,7 @@ schedule <- tibble::tribble(
   
   "2020-01-22", "Zoltan Dienes", "http://www.lifesci.sussex.ac.uk/home/Zoltan_Dienes/",
   "How to obtain evidence for the null hypothesis [paper](https://doi.org/10.1177/2515245919876960)", 
-  "14:00-15:00", "Seminar Room 529/511", "",
+  "14:00-15:00", "Seminar Room 529/511", "To get evidence for or against one's theory relative to the null hypothesis, one needs to know what it predicts. The amount of evidence can then be quantified by a Bayes factor. It is only when one has reasons for specifying a scale of effect that the level of evidence can be specified for no effect (that is, non-significance is not a reason for saying there is no effect). In almost all papers I read people declare absence of an effect while having no rational grounds for doing so. So we need to specify what scale of effect our theory predicts. Specifying what one's theory predicts may not come naturally, but I show some ways of thinking about the problem. I think our science will be better for it!",
 
   "2020-01-28", "Lisa DeBruine", "https://twitter.com/LisaDeBruine",
   "R Workshop, part 1: Introduction to Data Simulation [(materials)](https://osf.io/xpskm/)",
@@ -124,21 +129,43 @@ schedule <- tibble::tribble(
   
   "2020-02-19", "Ruud Hortensius", "https://twitter.com/RuudHortensius",
   "Tools for Reproducible fMRI Analysis [(materials)](https://osf.io/c28jq/) [(slides PDF)](slides/hortensius_fMRI_tools.pdf)",
-  "14:00-15:00", "Seminar Room 529/511", "",
+  "14:00-15:00", "Seminar Room 529/511", "On our way to transparent and reproducible neuroimaging we need to consider data and code in combination with the publication. In this talk, I will introduce a series of tools that the field has developed (BIDS, Heudiconv, MRIQC, MRIQCeption, fMRIprep, OpenNeuro, NeuroVault) that will not only help to achieve this goal of fully reproducible neuroimaging but also make a neuroimagers life easier. Note: while the tools are focussed on neuroimaging the principle holds for behavioural, eye-tracking and physiological measures (e.g., BIDS is applicable to these measures).",
   
   "2020-02-28", "Jessie Sun", "https://about.me/jessiesun",
   "Eavesdropping On Everyday Life",
   "12:00-13:00", "Seminar Room 529/511",
-  "This talk considers the unique insights that can be gained by combining multiple methods for studying daily life. In the Personality and Interpersonal Roles Study (PAIRS), 300 participants completed experience sampling method (ESM) self-reports while wearing the Electronically Activated Recorder (EAR), an unobtrusive audio recording device, for one week. Over the past five years, nearly 300 research assistants have transcribed and coded participants’ behaviors and environments from over 300,000 EAR audio files. To provide two examples of questions that can only be answered by capturing actual behavior alongside ESM self-reports, I will describe two projects that have resulted from this dataset: 1) Do people have self-knowledge of their momentary personality states, and 2) What are people doing when they miss experience sampling reports? I will conclude by discussing the opportunities and challenges of implementing open practices with this highly-identifiable and repeatedly-used dat
-aset."
+  "This talk considers the unique insights that can be gained by combining multiple methods for studying daily life. In the Personality and Interpersonal Roles Study (PAIRS), 300 participants completed experience sampling method (ESM) self-reports while wearing the Electronically Activated Recorder (EAR), an unobtrusive audio recording device, for one week. Over the past five years, nearly 300 research assistants have transcribed and coded participants’ behaviors and environments from over 300,000 EAR audio files. To provide two examples of questions that can only be answered by capturing actual behavior alongside ESM self-reports, I will describe two projects that have resulted from this dataset: 1) Do people have self-knowledge of their momentary personality states, and 2) What are people doing when they miss experience sampling reports? I will conclude by discussing the opportunities and challenges of implementing open practices with this highly-identifiable and repeatedly-used dataset.",
+  
+  "2020-04-29", "Lisa Kidd", "",
+  "The X factor: Using Q-methodology to understand perspectives of supported self-management in stroke",
+  "14:00-15:00", "Seminar Room 529/511", "",
+  
+  "2020-05-20", "Mine Çetinkaya-Rundel", "http://mine-cr.com/",
+  "The art and science of teaching data science", 
+  "12:00-13:00", "Seminar Room 529/511",
+  "Modern statistics is fundamentally a computational discipline, but too often this fact is not reflected in our statistics curricula. With the rise of data science it has become increasingly clear that students want, expect, and need explicit training in this area of the discipline. Additionally, recent curricular guidelines clearly state that working with data requires extensive computing skills and that statistics students should be fluent in accessing, manipulating, analyzing, and modeling with professional statistical analysis software. In this talk, we introduce the design philosophy behind an introductory data science course, discuss in progress and future research on student learning as well as new directions in assessment and tooling as we scale up the course."
 )
 
 
 schedule %>%
   mutate(Speaker = paste0("[", Speaker, "](", speaker_link,")")) %>%
+  mutate(Abstract = ifelse(Abstract == "", "", paste0(" <a>abstract</a><p class='abstract'>",Abstract, "</p>"))) %>%
+  mutate(Title = paste0(Title, Abstract)) %>%
+  select(-Abstract) %>%
   select(-speaker_link) %>%
   arrange(rev(Date)) %>%
-  knitr::kable()
+  kable(escape = FALSE) %>%
+  kable_styling("striped")
 
 ```
 
+
+<script>
+  /* set up abstract toggling */
+  $(document).ready(function () {
+    $("a:contains(abstract)").click(function(e) {
+      $(this).next().toggle();
+      return false;
+    });
+  });
+</script>

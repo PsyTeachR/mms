@@ -9,6 +9,6 @@ output:
 navbar:
   title: "Methodology & Meta-science"
   left:
-    - text: "GUPsych"
+    - text: "psyTeachR"
       icon: fa-home
       href: /

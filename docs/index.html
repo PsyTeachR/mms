@@ -22,6 +22,7 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -278,7 +279,7 @@ $(document).ready(function () {
   <a href="/">
     <span class="fa fa-home"></span>
      
-    GUPsych
+    psyTeachR
   </a>
 </li>
       </ul>
@@ -297,213 +298,551 @@ $(document).ready(function () {
 </div>
 
 
+<style>
+  .abstract { padding-top: 1em; display: none; }
+</style>
 <p><br><br> Methods &amp; Metascience is a working group at the Institute of Neuroscience and Psychology at the University of Glasgow. You can find our schedule and materials at this website.</p>
 <p>Our regular meetings are Wednesday afternoons from 2pm-3pm in 605 (aka Meeting room) or 529/551 at 62 Hillhead St (aka “Seminar” room) or Room 520 (Computer Lab) in the Boyd Orr. In addition to talks, we also run training events. If you would like to present or run a training workshop, please let <a href="mailto://dale.barr@glasgow.ac.uk">Dale</a> know!</p>
 <p>For an up-to-date list of talks, please see <a href="http://www.psy.gla.ac.uk/events/index.php?sub=12">the events list</a>.</p>
 <div id="schedule" class="section level3">
 <h3>Schedule</h3>
-<table>
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="left">Date</th>
-<th align="left">Speaker</th>
-<th align="left">Title</th>
-<th align="left">Time</th>
-<th align="left">Room</th>
+<tr>
+<th style="text-align:left;">
+Date
+</th>
+<th style="text-align:left;">
+Speaker
+</th>
+<th style="text-align:left;">
+Title
+</th>
+<th style="text-align:left;">
+Time
+</th>
+<th style="text-align:left;">
+Room
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="left">2020-02-28</td>
-<td align="left"><a href="https://about.me/jessiesun">Jessie Sun</a></td>
-<td align="left">Eavesdropping On Everyday Life</td>
-<td align="left">12:00-13:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2020-05-20
+</td>
+<td style="text-align:left;">
+<a href="http://mine-cr.com/">Mine Çetinkaya-Rundel</a>
+</td>
+<td style="text-align:left;">
+The art and science of teaching data science <a>abstract</a>
+<p class="abstract">
+Modern statistics is fundamentally a computational discipline, but too often this fact is not reflected in our statistics curricula. With the rise of data science it has become increasingly clear that students want, expect, and need explicit training in this area of the discipline. Additionally, recent curricular guidelines clearly state that working with data requires extensive computing skills and that statistics students should be fluent in accessing, manipulating, analyzing, and modeling with professional statistical analysis software. In this talk, we introduce the design philosophy behind an introductory data science course, discuss in progress and future research on student learning as well as new directions in assessment and tooling as we scale up the course.
+</p>
+</td>
+<td style="text-align:left;">
+12:00-13:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="even">
-<td align="left">2020-02-19</td>
-<td align="left"><a href="https://twitter.com/RuudHortensius">Ruud Hortensius</a></td>
-<td align="left">Tools for Reproducible fMRI Analysis <a href="https://osf.io/c28jq/">(materials)</a> <a href="slides/hortensius_fMRI_tools.pdf">(slides PDF)</a></td>
-<td align="left">14:00-15:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2020-04-29
+</td>
+<td style="text-align:left;">
+<a href="">Lisa Kidd</a>
+</td>
+<td style="text-align:left;">
+The X factor: Using Q-methodology to understand perspectives of supported self-management in stroke
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2020-02-05</td>
-<td align="left"><a href="https://twitter.com/LisaDeBruine">Lisa DeBruine</a></td>
-<td align="left">R Workshop, part 2: Understanding Mixed-Effects Models Through Data Simulation <a href="https://osf.io/xpskm/">(materials)</a></td>
-<td align="left">13:00-14:30</td>
-<td align="left">Boyd Orr 603</td>
+<tr>
+<td style="text-align:left;">
+2020-02-28
+</td>
+<td style="text-align:left;">
+<a href="https://about.me/jessiesun">Jessie Sun</a>
+</td>
+<td style="text-align:left;">
+Eavesdropping On Everyday Life <a>abstract</a>
+<p class="abstract">
+This talk considers the unique insights that can be gained by combining multiple methods for studying daily life. In the Personality and Interpersonal Roles Study (PAIRS), 300 participants completed experience sampling method (ESM) self-reports while wearing the Electronically Activated Recorder (EAR), an unobtrusive audio recording device, for one week. Over the past five years, nearly 300 research assistants have transcribed and coded participants’ behaviors and environments from over 300,000 EAR audio files. To provide two examples of questions that can only be answered by capturing actual behavior alongside ESM self-reports, I will describe two projects that have resulted from this dataset: 1) Do people have self-knowledge of their momentary personality states, and 2) What are people doing when they miss experience sampling reports? I will conclude by discussing the opportunities and challenges of implementing open practices with this highly-identifiable and repeatedly-used dataset.
+</p>
+</td>
+<td style="text-align:left;">
+12:00-13:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="even">
-<td align="left">2020-01-28</td>
-<td align="left"><a href="https://twitter.com/LisaDeBruine">Lisa DeBruine</a></td>
-<td align="left">R Workshop, part 1: Introduction to Data Simulation <a href="https://osf.io/xpskm/">(materials)</a></td>
-<td align="left">13:00-14:30</td>
-<td align="left">Boyd Orr 603</td>
+<tr>
+<td style="text-align:left;">
+2020-02-19
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/RuudHortensius">Ruud Hortensius</a>
+</td>
+<td style="text-align:left;">
+Tools for Reproducible fMRI Analysis <a href="https://osf.io/c28jq/">(materials)</a> <a href="slides/hortensius_fMRI_tools.pdf">(slides PDF)</a> <a>abstract</a>
+<p class="abstract">
+On our way to transparent and reproducible neuroimaging we need to consider data and code in combination with the publication. In this talk, I will introduce a series of tools that the field has developed (BIDS, Heudiconv, MRIQC, MRIQCeption, fMRIprep, OpenNeuro, NeuroVault) that will not only help to achieve this goal of fully reproducible neuroimaging but also make a neuroimagers life easier. Note: while the tools are focussed on neuroimaging the principle holds for behavioural, eye-tracking and physiological measures (e.g., BIDS is applicable to these measures).
+</p>
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2020-01-22</td>
-<td align="left"><a href="http://www.lifesci.sussex.ac.uk/home/Zoltan_Dienes/">Zoltan Dienes</a></td>
-<td align="left">How to obtain evidence for the null hypothesis <a href="https://doi.org/10.1177/2515245919876960">paper</a></td>
-<td align="left">14:00-15:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2020-02-05
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/LisaDeBruine">Lisa DeBruine</a>
+</td>
+<td style="text-align:left;">
+R Workshop, part 2: Understanding Mixed-Effects Models Through Data Simulation <a href="https://osf.io/xpskm/">(materials)</a>
+</td>
+<td style="text-align:left;">
+13:00-14:30
+</td>
+<td style="text-align:left;">
+Boyd Orr 603
+</td>
 </tr>
-<tr class="even">
-<td align="left">2020-01-15</td>
-<td align="left"><a href="https://twitter.com/robustgar">Guillaume Rousselet</a></td>
-<td align="left">Why interactions are difficult to interpret and many are simply uninterpretable (<a href="slides/rousselet_interactions.pdf">slides</a>)</td>
-<td align="left">14:00-15:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2020-01-28
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/LisaDeBruine">Lisa DeBruine</a>
+</td>
+<td style="text-align:left;">
+R Workshop, part 1: Introduction to Data Simulation <a href="https://osf.io/xpskm/">(materials)</a>
+</td>
+<td style="text-align:left;">
+13:00-14:30
+</td>
+<td style="text-align:left;">
+Boyd Orr 603
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2020-01-08</td>
-<td align="left"><a href="">Discussion of Yarkoni (2019)</a></td>
-<td align="left">Is there a generalizability crisis in psychology and neuroscience?</td>
-<td align="left">14:00-15:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2020-01-22
+</td>
+<td style="text-align:left;">
+<a href="http://www.lifesci.sussex.ac.uk/home/Zoltan_Dienes/">Zoltan Dienes</a>
+</td>
+<td style="text-align:left;">
+How to obtain evidence for the null hypothesis <a href="https://doi.org/10.1177/2515245919876960">paper</a> <a>abstract</a>
+<p class="abstract">
+To get evidence for or against one’s theory relative to the null hypothesis, one needs to know what it predicts. The amount of evidence can then be quantified by a Bayes factor. It is only when one has reasons for specifying a scale of effect that the level of evidence can be specified for no effect (that is, non-significance is not a reason for saying there is no effect). In almost all papers I read people declare absence of an effect while having no rational grounds for doing so. So we need to specify what scale of effect our theory predicts. Specifying what one’s theory predicts may not come naturally, but I show some ways of thinking about the problem. I think our science will be better for it!
+</p>
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="even">
-<td align="left">2019-11-13</td>
-<td align="left"><a href="https://twitter.com/dalejbarr">Dale Barr</a></td>
-<td align="left">Containerize your code: Creating reproducible software environments <a href="barr_container/index.html">(slides)</a></td>
-<td align="left">14:00-15:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2020-01-15
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/robustgar">Guillaume Rousselet</a>
+</td>
+<td style="text-align:left;">
+Why interactions are difficult to interpret and many are simply uninterpretable (<a href="slides/rousselet_interactions.pdf">slides</a>)
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2019-10-29</td>
-<td align="left"><a href="https://www.gla.ac.uk/schools/socialpolitical/research/students/andrewburns/">Andrew Burns</a></td>
-<td align="left">Qualitative data – reaching the parts that statistics can’t?</td>
-<td align="left">12:00-13:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2020-01-08
+</td>
+<td style="text-align:left;">
+<a href="">Discussion of Yarkoni (2019)</a>
+</td>
+<td style="text-align:left;">
+Is there a generalizability crisis in psychology and neuroscience?
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="even">
-<td align="left">2019-10-22</td>
-<td align="left"><a href="https://twitter.com/joanne_neary">Jo Neary and Kathryn Machray</a></td>
-<td align="left">Take a picture, it’ll last longer: Practical and ethical considerations on using visual methods in qualitative research</td>
-<td align="left">14:00-15:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2019-11-13
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/dalejbarr">Dale Barr</a>
+</td>
+<td style="text-align:left;">
+Containerize your code: Creating reproducible software environments <a href="barr_container/index.html">(slides)</a>
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2019-10-18</td>
-<td align="left"><a href="https://www.tue.nl/en/our-university/departments/industrial-engineering-innovation-sciences/the-department/staff/detail/ep/e/d/ep-uid/20176208/">Anne Scheel</a></td>
-<td align="left">Is Hypothesis Testing Overused in Psychology?</td>
-<td align="left">12:00-13:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2019-10-29
+</td>
+<td style="text-align:left;">
+<a href="https://www.gla.ac.uk/schools/socialpolitical/research/students/andrewburns/">Andrew Burns</a>
+</td>
+<td style="text-align:left;">
+Qualitative data – reaching the parts that statistics can’t?
+</td>
+<td style="text-align:left;">
+12:00-13:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="even">
-<td align="left">2019-10-09</td>
-<td align="left"><a href="https://twitter.com/Ben_C_J">Benedict Jones</a></td>
-<td align="left">Introducing p curve (<a href="https://osf.io/d3zea/">slides</a>)</td>
-<td align="left">14:00-15:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2019-10-22
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/joanne_neary">Jo Neary and Kathryn Machray</a>
+</td>
+<td style="text-align:left;">
+Take a picture, it’ll last longer: Practical and ethical considerations on using visual methods in qualitative research
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2019-10-02</td>
-<td align="left"><a href="http://carolynsaund.me/">Carolyn Saund</a></td>
-<td align="left">Crowdsourcing: The Good, The Bad, and The Ugly (<a href="https://github.com/csaund/presentations/blob/master/crowdsourcing_pres.pdf">slides</a>)</td>
-<td align="left">14:00-15:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2019-10-18
+</td>
+<td style="text-align:left;">
+<a href="https://www.tue.nl/en/our-university/departments/industrial-engineering-innovation-sciences/the-department/staff/detail/ep/e/d/ep-uid/20176208/">Anne Scheel</a>
+</td>
+<td style="text-align:left;">
+Is Hypothesis Testing Overused in Psychology?
+</td>
+<td style="text-align:left;">
+12:00-13:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="even">
-<td align="left">2019-09-24</td>
-<td align="left"><a href="https://twitter.com/JackEdTaylor">Jack Taylor and Lisa DeBruine</a></td>
-<td align="left">R Shiny Afternoon (<a href="https://psyteachr.github.io/shiny-tutorials/">tutorial</a>)</td>
-<td align="left">13:00-17:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2019-10-09
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/Ben_C_J">Benedict Jones</a>
+</td>
+<td style="text-align:left;">
+Introducing p curve (<a href="https://osf.io/d3zea/">slides</a>)
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2019-06-12</td>
-<td align="left"><a href="https://www.gla.ac.uk/researchinstitutes/neurosciencepsychology/staff/christophscheepers/">Christoph Scheepers and Dale Barr</a></td>
-<td align="left">Mixed-Effects Models Q&amp;A <a href="slides/Scheepers_Ordinal_Slides_and_Data.zip">(Christoph’s materials on ordinal logistic regression)</a></td>
-<td align="left">14:00-15:00</td>
-<td align="left">Seminar Room 529/511</td>
+<tr>
+<td style="text-align:left;">
+2019-10-02
+</td>
+<td style="text-align:left;">
+<a href="http://carolynsaund.me/">Carolyn Saund</a>
+</td>
+<td style="text-align:left;">
+Crowdsourcing: The Good, The Bad, and The Ugly (<a href="https://github.com/csaund/presentations/blob/master/crowdsourcing_pres.pdf">slides</a>)
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="even">
-<td align="left">2019-02-08</td>
-<td align="left"><a href="https://twitter.com/lakens">Daniël Lakens</a></td>
-<td align="left">Justify Everything (<a href="https://osf.io/j4s3c/">slides</a>)</td>
-<td align="left">15:30-16:30</td>
-<td align="left">Seminar Room 529/551</td>
+<tr>
+<td style="text-align:left;">
+2019-09-24
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/JackEdTaylor">Jack Taylor and Lisa DeBruine</a>
+</td>
+<td style="text-align:left;">
+R Shiny Afternoon (<a href="https://psyteachr.github.io/shiny-tutorials/">tutorial</a>)
+</td>
+<td style="text-align:left;">
+13:00-17:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2019-02-06</td>
-<td align="left"><a href="https://twitter.com/lisadebruine">Lisa DeBruine</a></td>
-<td align="left">Discussion prep for Friday seminar (by Daniël Lakens)<br>Readings: <a href="https://doi.org/10.1177/2515245918770963">Equivalence Testing for Psychological Research</a> &amp; <a href="https://psyarxiv.com/9s3y6/">Justify Your Alpha</a> (+<a href="http://daniellakens.blogspot.com/2018/12/testing-whether-observed-data-should.html">related blog post</a>)</td>
-<td align="left">14:00-15:00</td>
-<td align="left">Meeting Room 605</td>
+<tr>
+<td style="text-align:left;">
+2019-06-12
+</td>
+<td style="text-align:left;">
+<a href="https://www.gla.ac.uk/researchinstitutes/neurosciencepsychology/staff/christophscheepers/">Christoph Scheepers and Dale Barr</a>
+</td>
+<td style="text-align:left;">
+Mixed-Effects Models Q&amp;A <a href="slides/Scheepers_Ordinal_Slides_and_Data.zip">(Christoph’s materials on ordinal logistic regression)</a>
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/511
+</td>
 </tr>
-<tr class="even">
-<td align="left">2018-12-12</td>
-<td align="left"><a href="https://twitter.com/dalejbarr">Dale Barr</a></td>
-<td align="left">Randomizing and automating assessment with the <a href="http://www.r-exams.org">R exams</a> package <a href="slides/r-exams.pdf">(slides)</a></td>
-<td align="left">13:00-14:00</td>
-<td align="left">Meeting Room 605</td>
+<tr>
+<td style="text-align:left;">
+2019-02-08
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/lakens">Daniël Lakens</a>
+</td>
+<td style="text-align:left;">
+Justify Everything (<a href="https://osf.io/j4s3c/">slides</a>)
+</td>
+<td style="text-align:left;">
+15:30-16:30
+</td>
+<td style="text-align:left;">
+Seminar Room 529/551
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2018-12-05</td>
-<td align="left"><a href="https://github.com/Jack-Tay">Jack Taylor</a></td>
-<td align="left">LexOPS: A Web App for Stimulus Generation in Psycholinguistics (<a href="https://github.com/Jack-Tay/LexOPS">github</a>)</td>
-<td align="left">14:00-15:00</td>
-<td align="left">Meeting Room 605</td>
+<tr>
+<td style="text-align:left;">
+2019-02-06
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/lisadebruine">Lisa DeBruine</a>
+</td>
+<td style="text-align:left;">
+Discussion prep for Friday seminar (by Daniël Lakens)<br>Readings: <a href="https://doi.org/10.1177/2515245918770963">Equivalence Testing for Psychological Research</a> &amp; <a href="https://psyarxiv.com/9s3y6/">Justify Your Alpha</a> (+<a href="http://daniellakens.blogspot.com/2018/12/testing-whether-observed-data-should.html">related blog post</a>)
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Meeting Room 605
+</td>
 </tr>
-<tr class="even">
-<td align="left">2018-11-28</td>
-<td align="left"><a href="http://barsaloulab.org/">Larry Barsalou</a></td>
-<td align="left">The Situated Assessment Method (SAM^2): A new approach to measuring, understanding, and predicting health behaviours</td>
-<td align="left">14:00-15:00</td>
-<td align="left">Meeting Room 605</td>
+<tr>
+<td style="text-align:left;">
+2018-12-12
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/dalejbarr">Dale Barr</a>
+</td>
+<td style="text-align:left;">
+Randomizing and automating assessment with the <a href="http://www.r-exams.org">R exams</a> package <a href="slides/r-exams.pdf">(slides)</a>
+</td>
+<td style="text-align:left;">
+13:00-14:00
+</td>
+<td style="text-align:left;">
+Meeting Room 605
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2018-11-21</td>
-<td align="left"><a href="http://www.robinince.net/">Robin Ince</a></td>
-<td align="left">The Problem of Multiple Comparisons in Neuroimaging</td>
-<td align="left">14:00-15:00</td>
-<td align="left">Meeting Room 605</td>
+<tr>
+<td style="text-align:left;">
+2018-12-05
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/Jack-Tay">Jack Taylor</a>
+</td>
+<td style="text-align:left;">
+LexOPS: A Web App for Stimulus Generation in Psycholinguistics (<a href="https://github.com/Jack-Tay/LexOPS">github</a>)
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Meeting Room 605
+</td>
 </tr>
-<tr class="even">
-<td align="left">2018-11-14</td>
-<td align="left"><a href="https://www.gla.ac.uk/schools/psychology/staff/martinlages/#/">Martin Lages</a></td>
-<td align="left">Spot the celebrity lookalike!</td>
-<td align="left">14:00-15:00</td>
-<td align="left">Meeting Room 605</td>
+<tr>
+<td style="text-align:left;">
+2018-11-28
+</td>
+<td style="text-align:left;">
+<a href="http://barsaloulab.org/">Larry Barsalou</a>
+</td>
+<td style="text-align:left;">
+The Situated Assessment Method (SAM^2): A new approach to measuring, understanding, and predicting health behaviours
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Meeting Room 605
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2018-11-07</td>
-<td align="left"><a href="https://www.jessicakayflake.com/">Jessica Flake</a></td>
-<td align="left">The Fundamental Role of Construct Validity in Original and Replicated Research</td>
-<td align="left">14:00-15:30</td>
-<td align="left">Seminar Room 529/551</td>
+<tr>
+<td style="text-align:left;">
+2018-11-21
+</td>
+<td style="text-align:left;">
+<a href="http://www.robinince.net/">Robin Ince</a>
+</td>
+<td style="text-align:left;">
+The Problem of Multiple Comparisons in Neuroimaging
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Meeting Room 605
+</td>
 </tr>
-<tr class="even">
-<td align="left">2018-10-31</td>
-<td align="left"><a href="https://twitter.com/lisadebruine">Lisa DeBruine</a></td>
-<td align="left">Your First Shiny App <a href="https://debruine.github.io/shiny-tutorials/">(tutorial)</a></td>
-<td align="left">14:00-15:00</td>
-<td align="left">Boyd Orr Computer Lab Room 520</td>
+<tr>
+<td style="text-align:left;">
+2018-11-14
+</td>
+<td style="text-align:left;">
+<a href="https://www.gla.ac.uk/schools/psychology/staff/martinlages/#/">Martin Lages</a>
+</td>
+<td style="text-align:left;">
+Spot the celebrity lookalike!
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Meeting Room 605
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2018-10-24</td>
-<td align="left"><a href="https://twitter.com/Ben_C_J">Ben Jones</a></td>
-<td align="left">Writing Registered Reports <a href="slides/2018_10_24_Ben_Jones.pdf">(slides)</a></td>
-<td align="left">14:00-15:00</td>
-<td align="left">Seminar Room 529/551</td>
+<tr>
+<td style="text-align:left;">
+2018-11-07
+</td>
+<td style="text-align:left;">
+<a href="https://www.jessicakayflake.com/">Jessica Flake</a>
+</td>
+<td style="text-align:left;">
+The Fundamental Role of Construct Validity in Original and Replicated Research
+</td>
+<td style="text-align:left;">
+14:00-15:30
+</td>
+<td style="text-align:left;">
+Seminar Room 529/551
+</td>
 </tr>
-<tr class="even">
-<td align="left">2018-10-10</td>
-<td align="left"><a href="https://twitter.com/dalejbarr">Dale Barr</a></td>
-<td align="left">Mixed-effects modeling of temporal autocorrelation: Keep it minimal</td>
-<td align="left">14:00-15:00</td>
-<td align="left">Meeting Room 605</td>
+<tr>
+<td style="text-align:left;">
+2018-10-31
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/lisadebruine">Lisa DeBruine</a>
+</td>
+<td style="text-align:left;">
+Your First Shiny App <a href="https://debruine.github.io/shiny-tutorials/">(tutorial)</a>
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Boyd Orr Computer Lab Room 520
+</td>
 </tr>
-<tr class="odd">
-<td align="left">2018-10-03</td>
-<td align="left"><a href="https://twitter.com/schildchristoph">Christoph Schild</a></td>
-<td align="left">Introduction to the <a href="https://formr.org/">formr</a> survey framework in R <a href="https://osf.io/gu23h/">(slides)</a></td>
-<td align="left">15:00-16:00</td>
-<td align="left">Seminar Room 529/551</td>
+<tr>
+<td style="text-align:left;">
+2018-10-24
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/Ben_C_J">Ben Jones</a>
+</td>
+<td style="text-align:left;">
+Writing Registered Reports <a href="slides/2018_10_24_Ben_Jones.pdf">(slides)</a>
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/551
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-10-10
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/dalejbarr">Dale Barr</a>
+</td>
+<td style="text-align:left;">
+Mixed-effects modeling of temporal autocorrelation: Keep it minimal
+</td>
+<td style="text-align:left;">
+14:00-15:00
+</td>
+<td style="text-align:left;">
+Meeting Room 605
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2018-10-03
+</td>
+<td style="text-align:left;">
+<a href="https://twitter.com/schildchristoph">Christoph Schild</a>
+</td>
+<td style="text-align:left;">
+Introduction to the <a href="https://formr.org/">formr</a> survey framework in R <a href="https://osf.io/gu23h/">(slides)</a>
+</td>
+<td style="text-align:left;">
+15:00-16:00
+</td>
+<td style="text-align:left;">
+Seminar Room 529/551
+</td>
 </tr>
 </tbody>
 </table>
+<script>
+  /* set up abstract toggling */
+  $(document).ready(function () {
+    $("a:contains(abstract)").click(function(e) {
+      $(this).next().toggle();
+      return false;
+    });
+  });
+</script>
 </div>
 
 
