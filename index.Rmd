@@ -125,7 +125,11 @@ schedule <- tibble::tribble(
   
   "2020-02-19", "Ruud Hortensius", "https://twitter.com/RuudHortensius",
   "Tools for Reproducible fMRI Analysis [(materials)](https://osf.io/c28jq/) [(slides PDF)](slides/hortensius_fMRI_tools.pdf)",
-  "14:00-15:00", "Seminar Room 529/511"
+  "14:00-15:00", "Seminar Room 529/511",
+  
+  "2020-02-28", "Jessie Sun", "https://about.me/jessiesun",
+  "Eavesdropping On Everyday Life",
+  "12:00-13:00", "Seminar Room 529/511"
 )
 
 
