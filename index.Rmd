@@ -21,115 +21,116 @@ For an up-to-date list of talks, please see [the events list](http://www.psy.gla
 rss <- readLines("https://samoa.dcs.gla.ac.uk/events/rest/Feed/rss/141")
 
 schedule <- tibble::tribble(
-  ~Date, ~Speaker, ~speaker_link, ~Title, ~Time, ~Room,
+  ~Date, ~Speaker, ~speaker_link, ~Title, ~Time, ~Room, ~Abstract
   "2018-10-03", "Christoph Schild", "https://twitter.com/schildchristoph", 
     "Introduction to the [formr](https://formr.org/) survey framework in R [(slides)](https://osf.io/gu23h/)", 
-    "15:00-16:00", "Seminar Room 529/551",
+    "15:00-16:00", "Seminar Room 529/551", "",
 
   "2018-10-10", "Dale Barr", "https://twitter.com/dalejbarr", 
     "Mixed-effects modeling of temporal autocorrelation: Keep it minimal",
-    "14:00-15:00", "Meeting Room 605",
+    "14:00-15:00", "Meeting Room 605", "",
 
   "2018-10-24", "Ben Jones", "https://twitter.com/Ben_C_J",
     "Writing Registered Reports [(slides)](slides/2018_10_24_Ben_Jones.pdf)",
-    "14:00-15:00", "Seminar Room 529/551",
+    "14:00-15:00", "Seminar Room 529/551", "",
 
   "2018-10-31", "Lisa DeBruine", "https://twitter.com/lisadebruine",
     "Your First Shiny App [(tutorial)](https://debruine.github.io/shiny-tutorials/)",
-    "14:00-15:00", "Boyd Orr Computer Lab Room 520",
+    "14:00-15:00", "Boyd Orr Computer Lab Room 520", "",
 
   "2018-11-07", "Jessica Flake", "https://www.jessicakayflake.com/", 
     "The Fundamental Role of Construct Validity in Original and Replicated Research",
-    "14:00-15:30", "Seminar Room 529/551",
+    "14:00-15:30", "Seminar Room 529/551", "",
 
     "2018-11-14", "Martin Lages", "https://www.gla.ac.uk/schools/psychology/staff/martinlages/#/",
     "Spot the celebrity lookalike!",
-    "14:00-15:00", "Meeting Room 605",
+    "14:00-15:00", "Meeting Room 605", "",
 
   "2018-11-21", "Robin Ince", "http://www.robinince.net/", 
     "The Problem of Multiple Comparisons in Neuroimaging",
-    "14:00-15:00", "Meeting Room 605",
+    "14:00-15:00", "Meeting Room 605", "",
   
   "2018-11-28", "Larry Barsalou", "http://barsaloulab.org/",
     "The Situated Assessment Method (SAM^2): A new approach to measuring, understanding, and predicting health behaviours",
-    "14:00-15:00", "Meeting Room 605",
+    "14:00-15:00", "Meeting Room 605", "",
   
   "2018-12-05", "Jack Taylor", "https://github.com/Jack-Tay",
     "LexOPS: A Web App for Stimulus Generation in Psycholinguistics ([github](https://github.com/Jack-Tay/LexOPS))",
-    "14:00-15:00", "Meeting Room 605",
+    "14:00-15:00", "Meeting Room 605", "",
   
   "2018-12-12", "Dale Barr", "https://twitter.com/dalejbarr",
     "Randomizing and automating assessment with the [R exams](http://www.r-exams.org) package [(slides)](slides/r-exams.pdf)",
-    "13:00-14:00", "Meeting Room 605",
+    "13:00-14:00", "Meeting Room 605", "",
 
   "2019-02-06", "Lisa DeBruine", "https://twitter.com/lisadebruine",
     "Discussion prep for Friday seminar (by Daniël Lakens)<br>Readings: [Equivalence Testing for Psychological Research](https://doi.org/10.1177/2515245918770963) & [Justify Your Alpha](https://psyarxiv.com/9s3y6/) (+[related blog post](http://daniellakens.blogspot.com/2018/12/testing-whether-observed-data-should.html))",
-    "14:00-15:00", "Meeting Room 605",
+    "14:00-15:00", "Meeting Room 605", "",
   
   "2019-02-08", "Daniël Lakens", "https://twitter.com/lakens",
     "Justify Everything ([slides](https://osf.io/j4s3c/))",
-    "15:30-16:30", "Seminar Room 529/551",
+    "15:30-16:30", "Seminar Room 529/551", "",
 
   "2019-06-12", "Christoph Scheepers and Dale Barr", "https://www.gla.ac.uk/researchinstitutes/neurosciencepsychology/staff/christophscheepers/",
     "Mixed-Effects Models Q&A [(Christoph's materials on ordinal logistic regression)](slides/Scheepers_Ordinal_Slides_and_Data.zip)",
-    "14:00-15:00", "Seminar Room 529/511",
+    "14:00-15:00", "Seminar Room 529/511", "",
   
   "2019-09-24", "Jack Taylor and Lisa DeBruine", "https://twitter.com/JackEdTaylor",
   "R Shiny Afternoon ([tutorial](https://psyteachr.github.io/shiny-tutorials/))", 
-  "13:00-17:00", "Seminar Room 529/511",
+  "13:00-17:00", "Seminar Room 529/511", "",
   
   "2019-10-02", "Carolyn Saund", "http://carolynsaund.me/",
   "Crowdsourcing: The Good, The Bad, and The Ugly ([slides](https://github.com/csaund/presentations/blob/master/crowdsourcing_pres.pdf))",
-  "14:00-15:00", "Seminar Room 529/511",
-
+  "14:00-15:00", "Seminar Room 529/511", "",
   
   "2019-10-09", "Benedict Jones", "https://twitter.com/Ben_C_J",
   "Introducing p curve ([slides](https://osf.io/d3zea/))", 
-  "14:00-15:00", "Seminar Room 529/511",
+  "14:00-15:00", "Seminar Room 529/511", "",
   
   "2019-10-18", "Anne Scheel", "https://www.tue.nl/en/our-university/departments/industrial-engineering-innovation-sciences/the-department/staff/detail/ep/e/d/ep-uid/20176208/",
   "Is Hypothesis Testing Overused in Psychology?",
-  "12:00-13:00", "Seminar Room 529/511",
+  "12:00-13:00", "Seminar Room 529/511", "",
   
   "2019-10-22", "Jo Neary and Kathryn Machray", "https://twitter.com/joanne_neary",
   "Take a picture, it'll last longer: Practical and ethical considerations on using visual methods in qualitative research",
-  "14:00-15:00", "Seminar Room 529/511",
+  "14:00-15:00", "Seminar Room 529/511", "",
   
   "2019-10-29", "Andrew Burns", "https://www.gla.ac.uk/schools/socialpolitical/research/students/andrewburns/", 
   "Qualitative data – reaching the parts that statistics can’t?",
-  "12:00-13:00", "Seminar Room 529/511",
+  "12:00-13:00", "Seminar Room 529/511", "",
   
   "2019-11-13", "Dale Barr", "https://twitter.com/dalejbarr",
   "Containerize your code: Creating reproducible software environments [(slides)](barr_container/index.html)",
-  "14:00-15:00", "Seminar Room 529/511",
+  "14:00-15:00", "Seminar Room 529/511", "",
 
   "2020-01-08", "Discussion of Yarkoni (2019)", "",
   "Is there a generalizability crisis in psychology and neuroscience?",
-  "14:00-15:00", "Seminar Room 529/511",
+  "14:00-15:00", "Seminar Room 529/511", "",
 
   "2020-01-15", "Guillaume Rousselet", "https://twitter.com/robustgar",
   "Why interactions are difficult to interpret and many are simply uninterpretable ([slides](slides/rousselet_interactions.pdf))",
-  "14:00-15:00", "Seminar Room 529/511",
+  "14:00-15:00", "Seminar Room 529/511", "",
   
   "2020-01-22", "Zoltan Dienes", "http://www.lifesci.sussex.ac.uk/home/Zoltan_Dienes/",
   "How to obtain evidence for the null hypothesis [paper](https://doi.org/10.1177/2515245919876960)", 
-  "14:00-15:00", "Seminar Room 529/511",
+  "14:00-15:00", "Seminar Room 529/511", "",
 
   "2020-01-28", "Lisa DeBruine", "https://twitter.com/LisaDeBruine",
   "R Workshop, part 1: Introduction to Data Simulation [(materials)](https://osf.io/xpskm/)",
-  "13:00-14:30", "Boyd Orr 603",
+  "13:00-14:30", "Boyd Orr 603", "",
 
   "2020-02-05", "Lisa DeBruine", "https://twitter.com/LisaDeBruine",
   "R Workshop, part 2: Understanding Mixed-Effects Models Through Data Simulation [(materials)](https://osf.io/xpskm/)",
-  "13:00-14:30", "Boyd Orr 603",
+  "13:00-14:30", "Boyd Orr 603", "",
   
   "2020-02-19", "Ruud Hortensius", "https://twitter.com/RuudHortensius",
   "Tools for Reproducible fMRI Analysis [(materials)](https://osf.io/c28jq/) [(slides PDF)](slides/hortensius_fMRI_tools.pdf)",
-  "14:00-15:00", "Seminar Room 529/511",
+  "14:00-15:00", "Seminar Room 529/511", "",
   
   "2020-02-28", "Jessie Sun", "https://about.me/jessiesun",
   "Eavesdropping On Everyday Life",
-  "12:00-13:00", "Seminar Room 529/511"
+  "12:00-13:00", "Seminar Room 529/511",
+  "This talk considers the unique insights that can be gained by combining multiple methods for studying daily life. In the Personality and Interpersonal Roles Study (PAIRS), 300 participants completed experience sampling method (ESM) self-reports while wearing the Electronically Activated Recorder (EAR), an unobtrusive audio recording device, for one week. Over the past five years, nearly 300 research assistants have transcribed and coded participants’ behaviors and environments from over 300,000 EAR audio files. To provide two examples of questions that can only be answered by capturing actual behavior alongside ESM self-reports, I will describe two projects that have resulted from this dataset: 1) Do people have self-knowledge of their momentary personality states, and 2) What are people doing when they miss experience sampling reports? I will conclude by discussing the opportunities and challenges of implementing open practices with this highly-identifiable and repeatedly-used dat
+aset."
 )
 
 
