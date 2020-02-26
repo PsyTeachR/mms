@@ -12,6 +12,11 @@ library(tidyverse)
 url <- "https://samoa.dcs.gla.ac.uk/events/rest/Event/getgroupevents/141?includeChildren=false&startDate=2018-01-01T00%3A00%3A00.000Z"
 j <- read_json(url)
 
+url2 <- "https://samoa.dcs.gla.ac.uk/events/rest/Event/getgroupevents/169?includeChildren=false&startDate=2018-01-01T00%3A00%3A00.000Z"
+j2 <- read_json(url2)
+
+j <- c(j, j2)
+
 # map to a data frame
 jdf <- purrr::map_df(j, function(x) {
   list(
