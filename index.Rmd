@@ -134,10 +134,9 @@ Our regular meetings are Wednesday afternoons from 2pm-3pm in 605 (aka Meeting r
 
 For an up-to-date list of talks, please see [the events list](http://www.psy.gla.ac.uk/events/index.php?sub=12).
 
-### Schedule
 
 ```{r}
-jdf %>%
+schedule <- jdf %>%
   mutate(Speaker = ifelse(speaker_url == "", speaker_name, paste0("[", speaker_name, "](", speaker_url,")"))) %>%
   mutate(Speaker = paste0(Speaker, "<br>", speaker_affiliation)) %>%
   mutate(abstract = ifelse(abstract == "", "", paste0(" <a>(abstract)</a><div class='abstract'>",abstract, "</div>"))) %>%
@@ -145,9 +144,34 @@ jdf %>%
   separate(start, c("Date", "start"), sep = "T") %>%
   separate(end, c("x", "end"), sep = "T") %>%
   mutate(`Date/Time` = paste0(Date, "<br>", start, "-", end)) %>%
-  arrange(rev(`Date/Time`)) %>%
-  select(Speaker, Title, `Date/Time`, Location) %>%
-  kable(escape = FALSE) %>%
+  mutate(Location = gsub("62 Hillhead Street, ", "", Location)) %>%
+  select(Speaker, Title, `Date/Time`, Location, Date) 
+
+future <- filter(schedule, Date >= Sys.Date()) %>%
+  arrange(Date) %>%
+  select(-Date)
+
+past <- filter(schedule, Date < Sys.Date()) %>%
+  arrange(rev(Date)) %>%
+  select(-Date)
+
+```
+
+### Upcoming Events
+
+```{r}
+kable(future, escape = FALSE) %>%
+  kable_styling("striped", fixed_thead = TRUE) %>%
+  column_spec(1, width = "20%") %>%
+  column_spec(2, width = "50%") %>%
+  column_spec(3, width = "15%") %>%
+  column_spec(4, width = "15%")
+```
+
+### Past Events
+
+```{r}
+kable(past, escape = FALSE) %>%
   kable_styling("striped", fixed_thead = TRUE) %>%
   column_spec(1, width = "20%") %>%
   column_spec(2, width = "50%") %>%
