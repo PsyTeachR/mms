@@ -51,6 +51,7 @@ jdf <- mutate(jdf, resources = case_when(
   id == 16758 ~ "[(materials)](https://osf.io/xpskm/)",
   id == 16759 ~ "[(materials)](https://osf.io/xpskm/)",
   id == 16403 ~ "[(paper)](https://doi.org/10.1177/2515245919876960)",
+  id == 17134 ~ "[(slides)](/mms/slides/hyllested_generalizability_theory.pdf)",
   TRUE ~ resources
 ))
 
@@ -58,7 +59,7 @@ jdf <- mutate(jdf, resources = case_when(
 
 ```{r}
 # delete cancelled talks
-jdf <- filter(jdf, !id %in% c(16379, 16229, 15603))
+jdf <- filter(jdf, !id %in% c(16379L, 16229L, 15603L, 16746L, 16963L, 16933L))
 
 # add missing 
 
@@ -84,6 +85,8 @@ filter(jdf, speaker_url == "") %>%
 # check for speakers with no affiliation
 filter(jdf, speaker_affiliation == "") %>%
   select(speaker_name)
+
+## 17054, 17080, 17102
 ```
 
 
@@ -120,7 +123,8 @@ jdf <- mutate(jdf, speaker_url = case_when(
   mutate(speaker_affiliation = case_when(
     speaker_name %in% glasgow_speakers ~ "University of Glasgow",
     TRUE ~ speaker_affiliation
-  ))
+    )) %>%
+  mutate(Location = if_else(id %in% c(17054, 17080, 17102), "Zoom", Location))
 ```
 
 <style>
@@ -128,12 +132,11 @@ jdf <- mutate(jdf, speaker_url = case_when(
 </style>
 
 <br><br>
-Methods & Metascience is a working group at the Institute of Neuroscience and Psychology at the University of Glasgow. You can find our schedule and materials at this website.
+Methods & Metascience is a journal club and discussion group at the Institute of Neuroscience and Psychology at the University of Glasgow. You can find our schedule and materials at this website. In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Dale](mailto://dale.barr@glasgow.ac.uk) know!
 
-Our regular meetings are Wednesday afternoons from 2pm-3pm in 605 (aka Meeting room) or 529/551 at 62 Hillhead St (aka "Seminar" room) or Room 520 (Computer Lab) in the Boyd Orr. In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Dale](mailto://dale.barr@glasgow.ac.uk) know!
-
+<!--
 For an up-to-date list of talks, please see [the events list](http://www.psy.gla.ac.uk/events/index.php?sub=12).
-
+-->
 
 ```{r}
 schedule <- jdf %>%
@@ -171,7 +174,7 @@ kable(future, escape = FALSE) %>%
 ### Past Events
 
 ```{r}
-kable(past, escape = FALSE) %>%
+kable(past %>% arrange(desc(`Date/Time`)), escape = FALSE) %>%
   kable_styling("striped", fixed_thead = TRUE) %>%
   column_spec(1, width = "20%") %>%
   column_spec(2, width = "50%") %>%
