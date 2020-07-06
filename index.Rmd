@@ -52,6 +52,7 @@ jdf <- mutate(jdf, resources = case_when(
   id == 16759 ~ "[(materials)](https://osf.io/xpskm/)",
   id == 16403 ~ "[(paper)](https://doi.org/10.1177/2515245919876960)",
   id == 17134 ~ "[(slides)](/mms/slides/hyllested_generalizability_theory.pdf)",
+  id == 17130L ~ "[(slides)](/mms/slides/taylor-estimating-distributional-parameters.pdf)",
   TRUE ~ resources
 ))
 
@@ -160,15 +161,19 @@ past <- filter(schedule, Date < Sys.Date()) %>%
 
 ```
 
-### Upcoming Events
-
-```{r}
-kable(future, escape = FALSE) %>%
-  kable_styling("striped", fixed_thead = TRUE) %>%
-  column_spec(1, width = "20%") %>%
-  column_spec(2, width = "50%") %>%
-  column_spec(3, width = "15%") %>%
-  column_spec(4, width = "15%")
+```{r, results="asis"}
+if (nrow(future) > 0L) {
+  cat("\n### Upcoming Events\n\n")
+  
+  kable(future, escape = FALSE) %>%
+    kable_styling("striped", fixed_thead = TRUE) %>%
+    column_spec(1, width = "20%") %>%
+    column_spec(2, width = "50%") %>%
+    column_spec(3, width = "15%") %>%
+    column_spec(4, width = "15%")
+} else {
+  cat("\n")
+}
 ```
 
 ### Past Events
