@@ -133,13 +133,11 @@ jdf <- mutate(jdf, speaker_url = case_when(
 </style>
 
 <br><br>
-Methods & Metascience is a journal club and discussion group at the Institute of Neuroscience and Psychology at the University of Glasgow. You can find our schedule and materials at this website. Contact [Lisa](mailto://lisa.debruine@glasgow.ac.uk) for access to the zoom links. 
-
+Methods & Metascience is a journal club and discussion group at the Institute of Neuroscience and Psychology at the University of Glasgow. Meetings are every other week on Wednesdays from 14:00 to 15:00 GMT on Zoom (ignore the auto-generated location and times for a few of the future events). Contact [Lisa](mailto://lisa.debruine@glasgow.ac.uk) for access to the zoom links. 
 
 In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Lisa](mailto://lisa.debruine@glasgow.ac.uk) know!
 
-
-For an up-to-date list of talks, please see [the events list](http://www.psy.gla.ac.uk/events/index.php?sub=12).
+This page is rendered when Lisa remembers, but is not dynamic. For a dynamically updated list of talks, please see [the events list](http://www.psy.gla.ac.uk/events/index.php?sub=12).
 
 
 ```{r}
