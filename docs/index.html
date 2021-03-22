@@ -13,25 +13,46 @@
 
 <title>Methods &amp; Meta-Science</title>
 
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<meta property="og:title" content="Methods & MetaScience Seminar">
+<meta property="og:description" content="Schedule and material for the Methods & MetaScience seminar series for the University of Glasgow's Institute of Neuroscience and Psychology">
+<meta property="og:image" content="https://psyteachr.github.io/images/twitter/mms.png">
+<meta property="og:url" content="https://psyteachr.github.io/mms/">
+<meta property="twitter:card" content="summary_large_image">
+<link rel="shortcut icon" href="https://psyteachr.github.io/images/mms_hex.png">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -44,32 +65,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -80,10 +76,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -100,40 +92,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 60px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h2 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h3 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h4 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h5 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h6 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -161,7 +126,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -173,7 +138,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -184,10 +149,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -199,7 +177,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -277,7 +254,7 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li>
   <a href="/">
-    <span class="fa fa-home"></span>
+    <span class="fas fa-home"></span>
      
     psyTeachR
   </a>
@@ -290,7 +267,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -302,10 +279,121 @@ $(document).ready(function () {
 <style>
   .abstract { padding-top: 1em; display: none; }
 </style>
-<p><br><br> Methods &amp; Metascience is a journal club and discussion group at the Institute of Neuroscience and Psychology at the University of Glasgow. You can find our schedule and materials at this website. In addition to talks, we also run training events. If you would like to present or run a training workshop, please let <a href="mailto://dale.barr@glasgow.ac.uk">Dale</a> know!</p>
-<!--
-For an up-to-date list of talks, please see [the events list](http://www.psy.gla.ac.uk/events/index.php?sub=12).
--->
+<p><br><br> Methods &amp; Metascience is a journal club and discussion group at the Institute of Neuroscience and Psychology at the University of Glasgow. You can find our schedule and materials at this website. Contact <a href="mailto://lisa.debruine@glasgow.ac.uk">Lisa</a> for access to the zoom links.</p>
+<p>In addition to talks, we also run training events. If you would like to present or run a training workshop, please let <a href="mailto://lisa.debruine@glasgow.ac.uk">Lisa</a> know!</p>
+<p>For an up-to-date list of talks, please see <a href="http://www.psy.gla.ac.uk/events/index.php?sub=12">the events list</a>.</p>
+<div id="upcoming-events" class="section level3">
+<h3>Upcoming Events</h3>
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Speaker
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Title
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Date/Time
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Location
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="https://softloud.github.io/onetimetrophybitch/">Charles Gray</a><br>Newcastle University
+</td>
+<td style="text-align:left;width: 50%; ">
+It’s good enough to fail at reproducible science (Charles Gray) <a>(abstract)</a>
+<div class="abstract">
+<p>As scientists, it’s desirable to demonstrate to others (including our future selves) that our computational scientific work validates the claims we make in published research. Being able to reproduce the work is a key component of easily validating an analysis, as well as extending the work. Reproducibility is not as simple, however, as sharing the code and data that produced our analysis. We must consider how our data and algorithms are understood, variables defined, etc. Our code needs to be accessible and interoperable. There is much guidance about best practice, but this is often overwhelming for those of us who are not from formal computer science training. In this talk I share the story of how I attempted good enough practice in my doctoral thesis, and found even this was simply too much to achieve. Indeed, despite failing to achieve good enough scientific practice in any aspect of reproducibility, I discovered a delightful world of scientific workflows in R that make every day just that bit easier now. Failing at reproducible science in R is the best we can aim for; we will never achieve best practice in every aspect of reproducibility, and if we failed, then we tried. Through this process we discover useful tools to make the next time easier.</p>
+Bio: Dr Charles T. Gray is a postdoc with the evidence synthesis lab at Newcastle University in the UK. She is currently specialising in Bayesian network meta-analysis in Cochrane intervention reviews. She has three degrees: arts, music, and mathematics. None of these prepared her for writing a dissertation in interdisciplinary computational metascience doctoral thesis in R.
+</div>
+</td>
+<td style="text-align:left;width: 15%; ">
+2021-03-24<br>14:00-15:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="https://debruine.github.io">Lisa DeBruine</a><br>University of Glasgow
+</td>
+<td style="text-align:left;width: 50%; ">
+Coding Club: Shiny Quiz 2 <a>(abstract)</a>
+<div class="abstract">
+<p>This week, we will continue working on the <a href="https://shiny.psy.gla.ac.uk/debruine/coding_club/">Buzzfeed-style quiz app</a> to add code that records choices and controls the question progression.</p>
+<p>
+Prep for this meeting:
+</p>
+<ul>
+<li>
+decide what your quiz theme and questions will be
+</li>
+<li>
+find images for each question (Pixabay is a good site for open-access images)
+</li>
+<li>
+set up a few questions with image buttons
+</li>
+<li>
+Edit the info tab to include image citation information
+</li>
+</ul>
+<p>
+You can access all materials at the <a href="https://psyteachr.github.io/shiny-tutorials/coding_club.html">coding club</a> website.
+</p>
+</div>
+</td>
+<td style="text-align:left;width: 15%; ">
+2021-03-31<br>13:00-14:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="https://briannadym.com/">Brianna Dym</a><br>University of Colorado, Boulder
+</td>
+<td style="text-align:left;width: 50%; ">
+Brianna Dym (TBA) <a>(abstract)</a>
+<div class="abstract">
+(TBA) researching vulnerable online communities, technology and empowerment, data privacy and ethics
+</div>
+</td>
+<td style="text-align:left;width: 15%; ">
+2021-04-21<br>13:00-14:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="https://ukdataservice.ac.uk/media/605111/reusingdataslides22may18.pdf">Maureen Haaker</a><br>UKData Service/ University of Suffolk
+</td>
+<td style="text-align:left;width: 50%; ">
+(Re)Using Qualitative Data: Getting the Most Out of Data <a>(abstract)</a>
+<div class="abstract">
+Maureen Haaker (UKData Service): (Re)Using Qualitative Data: Getting the Most Out of Data
+</div>
+</td>
+<td style="text-align:left;width: 15%; ">
+2021-06-02<br>13:00-14:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="past-events" class="section level3">
 <h3>Past Events</h3>
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
@@ -326,6 +414,58 @@ Location
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="https://debruine.github.io">Lisa DeBruine</a><br>University of Glasgow
+</td>
+<td style="text-align:left;width: 50%; ">
+Coding Club: Shiny Quiz <a>(abstract)</a>
+<div class="abstract">
+Join us to learn more about coding with fun tasks. This week, we’ll be working on a shiny app for collecting quiz data. Download the template at <a href="https://github.com/debruine/shiny_template" class="uri">https://github.com/debruine/shiny_template</a> to code along, or just join and watch. The full code for the app will be available after the session.
+</div>
+</td>
+<td style="text-align:left;width: 15%; ">
+2021-03-17<br>14:00-15:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="https://twitter.com/dalejbarr/">Dale Barr</a><br>University of Glasgow
+</td>
+<td style="text-align:left;width: 50%; ">
+Time-varying trends in repeated measures data: Model, control, or ignore? <a>(abstract)</a>
+<div class="abstract">
+<p>Speaker: Dale Barr</p>
+Abstract: Almost all experiments in psychology and neuroscience involve repeated measurements taken over time. Very often, measurements from individual subjects show temporal variation due to such factors as practice, fatigue, mind wandering, or environmental distraction. However, in our statistical analyses we generally ignore this temporal variation. Under what circumstances is this a problem? And what are the potential benefits of modeling trial-by-trial fluctuations in performance? I will discuss pros and cons of various options for time-series modeling, including non-linear mixed-effects models, polynomial regression, and generalized additive mixed models (GAMMs). I will also discuss the potential for boosting power through experimental design, including results from a new project that is attempting to improve upon conventional randomization strategies.
+</div>
+</td>
+<td style="text-align:left;width: 15%; ">
+2021-03-10<br>14:00-15:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="http://www.robinince.net">Robin Ince</a><br>University of Glasgow
+</td>
+<td style="text-align:left;width: 50%; ">
+Discussion: Edgington &amp; Onghena, Randomization Tests <a>(abstract)</a>
+<div class="abstract">
+For more details, including how to access the readings, see event announcement on Microsoft Teams
+</div>
+</td>
+<td style="text-align:left;width: 15%; ">
+2020-10-16<br>14:30-15:30
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
 <tr>
 <td style="text-align:left;width: 20%; ">
 <a href="https://twitter.com/jackedtaylor">Jack Taylor</a><br>University of Glasgow
@@ -1136,7 +1276,7 @@ Level 5, Seminar Room
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -1154,7 +1294,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

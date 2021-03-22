@@ -6,6 +6,8 @@ output:
     self_contained: no
     theme: flatly
     css: style.css
+    include:
+      in_header: "header.html"
 navbar:
   title: "Methodology & Meta-science"
   left:
