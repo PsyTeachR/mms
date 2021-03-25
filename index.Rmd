@@ -128,12 +128,23 @@ jdf <- mutate(jdf, speaker_url = case_when(
   mutate(Location = if_else(id %in% c(17054, 17080, 17102), "Zoom", Location))
 ```
 
+```{r}
+# fix timezone
+
+jdf$end <- lubridate::ymd_hm(jdf$end, tz = "UTC") %>%
+           lubridate::with_tz("Europe/London")
+
+jdf$start <- lubridate::ymd_hm(jdf$start, tz = "UTC") %>%
+           lubridate::with_tz("Europe/London")
+```
+
+
 <style>
   .abstract { padding-top: 1em; display: none; }
 </style>
 
 <br><br>
-Methods & Metascience is a journal club and discussion group at the Institute of Neuroscience and Psychology at the University of Glasgow. Meetings are every other week on Wednesdays from 14:00 to 15:00 GMT on Zoom (ignore the auto-generated location and times for a few of the future events). Contact [Lisa](mailto://lisa.debruine@glasgow.ac.uk) for access to the zoom links. 
+Methods & Metascience is a journal club and discussion group at the Institute of Neuroscience and Psychology at the University of Glasgow. Meetings are every other week on Wednesdays from 14:00 to 15:00 GMT on Zoom (ignore the auto-generated location for a few of the future events). Contact [Lisa](mailto://lisa.debruine@glasgow.ac.uk) for access to the zoom links. 
 
 In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Lisa](mailto://lisa.debruine@glasgow.ac.uk) know!
 
