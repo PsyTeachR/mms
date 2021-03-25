@@ -152,24 +152,28 @@ This page is rendered when Lisa remembers, but is not dynamic. For a dynamically
 
 
 ```{r}
+
+sf <- lubridate::stamp("Sunday, Jan 17, 1999")
+tm <- lubridate::stamp("15:34")
+
 schedule <- jdf %>%
   mutate(Speaker = ifelse(speaker_url == "", speaker_name, paste0("[", speaker_name, "](", speaker_url,")"))) %>%
   mutate(Speaker = paste0(Speaker, "<br>", speaker_affiliation)) %>%
   mutate(abstract = ifelse(abstract == "", "", paste0(" <a>(abstract)</a><div class='abstract'>",abstract, "</div>"))) %>%
   mutate(Title = paste0(title, " ", resources, " ", abstract)) %>%
-  separate(start, c("Date", "start"), sep = "T") %>%
-  separate(end, c("x", "end"), sep = "T") %>%
-  mutate(`Date/Time` = paste0(Date, "<br>", start, "-", end)) %>%
+  #separate(start, c("Date", "start"), sep = "T") %>%
+  #separate(end, c("x", "end"), sep = "T") %>%
+  mutate(`Date/Time` = paste0(sf(start), "<br>", tm(start), "-", tm(end))) %>%
   mutate(Location = gsub("62 Hillhead Street, ", "", Location)) %>%
-  select(Speaker, Title, `Date/Time`, Location, Date) 
+  select(Speaker, Title, `Date/Time`, Location, start) 
 
-future <- filter(schedule, Date >= Sys.Date()) %>%
-  arrange(Date) %>%
-  select(-Date)
+future <- filter(schedule, start >= Sys.Date()) %>%
+  arrange(start) %>%
+  select(-start)
 
-past <- filter(schedule, Date < Sys.Date()) %>%
-  arrange(rev(Date)) %>%
-  select(-Date)
+past <- filter(schedule, start < Sys.Date()) %>%
+  arrange(rev(start)) %>%
+  select(-start)
 
 ```
 
