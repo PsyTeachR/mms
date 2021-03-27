@@ -153,7 +153,7 @@ This page is rendered when Lisa remembers, but is not dynamic. For a dynamically
 
 ```{r}
 
-sf <- lubridate::stamp("Sunday, Jan 17, 1999")
+sf <- lubridate::stamp("Wed, Jan 17, 1999")
 tm <- lubridate::stamp("15:34")
 
 schedule <- jdf %>%
@@ -184,8 +184,8 @@ if (nrow(future) > 0L) {
   kable(future, escape = FALSE) %>%
     kable_styling("striped", fixed_thead = TRUE) %>%
     column_spec(1, width = "20%") %>%
-    column_spec(2, width = "50%") %>%
-    column_spec(3, width = "15%") %>%
+    column_spec(2, width = "45%") %>%
+    column_spec(3, width = "20%") %>%
     column_spec(4, width = "15%")
 } else {
   cat("\n")
@@ -198,8 +198,8 @@ if (nrow(future) > 0L) {
 kable(past %>% arrange(desc(`Date/Time`)), escape = FALSE) %>%
   kable_styling("striped", fixed_thead = TRUE) %>%
   column_spec(1, width = "20%") %>%
-  column_spec(2, width = "50%") %>%
-  column_spec(3, width = "15%") %>%
+  column_spec(2, width = "45%") %>%
+  column_spec(3, width = "20%") %>%
   column_spec(4, width = "15%")
 ```
 
