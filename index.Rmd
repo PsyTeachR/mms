@@ -172,7 +172,7 @@ future <- filter(schedule, start >= Sys.Date()) %>%
   select(-start)
 
 past <- filter(schedule, start < Sys.Date()) %>%
-  arrange(rev(start)) %>%
+  arrange(desc(start)) %>%
   select(-start)
 
 ```
