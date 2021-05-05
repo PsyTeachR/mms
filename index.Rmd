@@ -36,6 +36,16 @@ jdf <- purrr::map_df(j, function(x) {
 ```
 
 ```{r}
+# fix location
+jdf <- mutate(jdf, Location = case_when(
+  id == 17740 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
+  id >= 17305 ~ "Zoom",
+  TRUE ~ Location
+))
+```
+
+
+```{r}
 # add resources
 
 jdf <- mutate(jdf, resources = case_when(
@@ -144,7 +154,7 @@ jdf$start <- lubridate::ymd_hm(jdf$start, tz = "UTC") %>%
 </style>
 
 <br><br>
-Methods & Metascience is a journal club and discussion group at the Institute of Neuroscience and Psychology at the University of Glasgow. Meetings are every other week on Wednesdays from 14:00 to 15:00 GMT on Zoom (ignore the auto-generated location for a few of the future events). Contact [Lisa](mailto://lisa.debruine@glasgow.ac.uk) for access to the zoom links. 
+Methods & Metascience is a journal club and discussion group at the Institute of Neuroscience and Psychology at the University of Glasgow. Meetings are every other week on Wednesdays from 14:00 to 15:00 UK time on Zoom (ignore the auto-generated location for a few of the future events). Contact [Lisa](mailto://lisa.debruine@glasgow.ac.uk) for access to the zoom links. 
 
 In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Lisa](mailto://lisa.debruine@glasgow.ac.uk) know!
 
@@ -195,7 +205,7 @@ if (nrow(future) > 0L) {
 ### Past Events
 
 ```{r}
-kable(past %>% arrange(desc(`Date/Time`)), escape = FALSE) %>%
+kable(past, escape = FALSE) %>%
   kable_styling("striped", fixed_thead = TRUE) %>%
   column_spec(1, width = "20%") %>%
   column_spec(2, width = "45%") %>%
