@@ -38,7 +38,7 @@ jdf <- purrr::map_df(j, function(x) {
 ```{r}
 # fix location
 jdf <- mutate(jdf, Location = case_when(
-  id == 17740 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
+  id == 17747 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
   id >= 17305 ~ "Zoom",
   TRUE ~ Location
 ))
