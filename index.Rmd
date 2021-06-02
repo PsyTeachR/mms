@@ -1,5 +1,5 @@
 ---
-title: "Methods & Meta-Science"
+title: "Methods & MetaScience"
 ---
 
 ```{r setup, include=FALSE}
@@ -154,11 +154,13 @@ jdf$start <- lubridate::ymd_hm(jdf$start, tz = "UTC") %>%
 </style>
 
 <br><br>
-Methods & Metascience is a journal club and discussion group at the Institute of Neuroscience and Psychology at the University of Glasgow. Meetings are every other week on Wednesdays from 14:00 to 15:00 UK time on Zoom (ignore the auto-generated location for a few of the future events). Contact [Lisa](mailto://lisa.debruine@glasgow.ac.uk) for access to the zoom links. 
+Methods & MetaScience is a journal club and discussion group at the Institute of Neuroscience and Psychology at the University of Glasgow. Meetings are every other week on Wednesdays from 14:00 to 15:00 UK time on Zoom. 
 
 In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Lisa](mailto://lisa.debruine@glasgow.ac.uk) know!
 
-This page is rendered when Lisa remembers, but is not dynamic. For a dynamically updated list of talks, please see [the events list](http://www.psy.gla.ac.uk/events/index.php?sub=12).
+Some of our events are open to the public and the zoom link will be posted here if so. Contact [Lisa](mailto://lisa.debruine@glasgow.ac.uk) for access to the Teams channel that has the recordings and zoom links for non-public events if you are  University of Glasgow staff or student.
+
+This page is rendered when Lisa remembers, but is not (yet) dynamic. For a dynamically updated list of talks, please see [the events list](http://www.psy.gla.ac.uk/events/index.php?sub=12).
 
 
 ```{r}
