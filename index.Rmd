@@ -1,5 +1,5 @@
 ---
-title: "Methods & MetaScience"
+title: "Methods & MetaScience <img src='https://psyteachr.github.io/images/mms_hex.png' align='right' alt='logo' style='width:25%; box-shadow: none; margin-bottom: 0;' />"
 ---
 
 ```{r setup, include=FALSE}
@@ -7,7 +7,6 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 library(jsonlite)
 library(kableExtra)
 library(tidyverse)
-
 # load in current list
 url <- "https://samoa.dcs.gla.ac.uk/events/rest/Event/getgroupevents/141?includeChildren=false&startDate=2018-01-01T00%3A00%3A00.000Z"
 j <- read_json(url)
@@ -38,7 +37,8 @@ jdf <- purrr::map_df(j, function(x) {
 ```{r}
 # fix location
 jdf <- mutate(jdf, Location = case_when(
-  id == 17737 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
+  # id == 17737 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
+  start > Sys.Date() & grepl("^Coding Club", title, FALSE) ~ "[Zoom](https://uofglasgow.zoom.us/j/93838448011)",
   id >= 17305 ~ "Zoom",
   TRUE ~ Location
 ))
@@ -63,6 +63,8 @@ jdf <- mutate(jdf, resources = case_when(
   id == 16403 ~ "[(paper)](https://doi.org/10.1177/2515245919876960)",
   id == 17134 ~ "[(slides)](/mms/slides/hyllested_generalizability_theory.pdf)",
   id == 17130L ~ "[(slides)](/mms/slides/taylor-estimating-distributional-parameters.pdf)",
+  id == 17737 ~ "[(slides)](/mms/slides/UKDS_GettingMostOutofData_02-06-2021.pdf)",
+  grepl("^Coding Club", title, FALSE) ~ "[(materials)](https://psyteachr.github.io/shiny-tutorials/coding_club.html)",
   TRUE ~ resources
 ))
 
@@ -104,7 +106,7 @@ filter(jdf, speaker_affiliation == "") %>%
 ```{r}
 # fixes for missing info
 
-glasgow_speakers <- c("Lisa DeBruine", "Dale Barr", "Ben Jones", "Benedict Jones", "Guillaume Rousselet", "Martin Lages", "Robin Ince and Guillaume Rousselet", "Maria Gardani & Satu Baylan", "Jack Taylor and Lisa DeBruine", "Dr. Jo Neary & Kathryn Machray", "Lawrence Barsalou", "Jack Taylor", "Carolyn Saund", "Robin Ince", "Anna Henschel", "Ruud Hortensius")
+glasgow_speakers <- c("Lisa DeBruine", "Dale Barr", "Ben Jones", "Benedict Jones", "Guillaume Rousselet", "Martin Lages", "Robin Ince and Guillaume Rousselet", "Maria Gardani & Satu Baylan", "Jack Taylor and Lisa DeBruine", "Dr. Jo Neary & Kathryn Machray", "Lawrence Barsalou", "Jack Taylor", "Carolyn Saund", "Robin Ince", "Anna Henschel", "Ruud Hortensius", "Maria Gardani")
 
 
 ## add speaker URLs
@@ -189,10 +191,23 @@ past <- filter(schedule, start < Sys.Date()) %>%
 
 ```
 
+<span class="red mm">m</span>
+<span class="orange mm">m</span>
+<span class="yellow mm">m</span>
+<span class="green mm">m</span>
+<span class="blue mm">m</span>
+<span class="brown mm">m</span>
+<span class="red mm">m</span>
+<span class="orange mm">m</span>
+<span class="yellow mm">m</span>
+<span class="green mm">m</span>
+<span class="blue mm">m</span>
+<span class="brown mm">m</span>
+
+### Upcoming Events
+
 ```{r, results="asis"}
 if (nrow(future) > 0L) {
-  cat("\n### Upcoming Events\n\n")
-  
   kable(future, escape = FALSE) %>%
     kable_styling("striped", fixed_thead = TRUE) %>%
     column_spec(1, width = "20%") %>%
@@ -203,6 +218,19 @@ if (nrow(future) > 0L) {
   cat("\n")
 }
 ```
+
+<span class="red mm">m</span>
+<span class="orange mm">m</span>
+<span class="yellow mm">m</span>
+<span class="green mm">m</span>
+<span class="blue mm">m</span>
+<span class="brown mm">m</span>
+<span class="red mm">m</span>
+<span class="orange mm">m</span>
+<span class="yellow mm">m</span>
+<span class="green mm">m</span>
+<span class="blue mm">m</span>
+<span class="brown mm">m</span>
 
 ### Past Events
 

@@ -9,7 +9,7 @@ output:
     include:
       in_header: "header.html"
 navbar:
-  title: "Methodology & Meta-science"
+  title: "Methods & Meta-science"
   left:
     - text: "psyTeachR"
       icon: fa-home

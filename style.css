@@ -2,6 +2,24 @@ code {
   color: #6666FF !important;
 }
 
+.mm {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #553329;
+  border-radius: 20px;
+  margin: 5px;
+  color: white;
+  font: 20px Century, serif;
+  text-align: center;
+  line-height: 25px;
+}
+.mm.red { background-color: #C5463D; }
+.mm.orange { background-color: #F67B3C; }
+.mm.yellow { background-color: #F6D02F; }
+.mm.green { background-color: #01B43D; }
+.mm.blue { background-color: #25B3F1; }
+
 img {
   max-width: 400px;
   box-shadow: 0 0 4px rgba(0,0,0,0.5);
