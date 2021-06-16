@@ -37,7 +37,8 @@ jdf <- purrr::map_df(j, function(x) {
 ```{r}
 # fix location
 jdf <- mutate(jdf, Location = case_when(
-  # id == 17737 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
+  id == 17750 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
+  id == 17771 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
   start > Sys.Date() & grepl("^Coding Club", title, FALSE) ~ "[Zoom](https://uofglasgow.zoom.us/j/93838448011)",
   id >= 17305 ~ "Zoom",
   TRUE ~ Location
@@ -73,7 +74,7 @@ jdf <- mutate(jdf, resources = case_when(
 
 ```{r}
 # delete cancelled talks
-jdf <- filter(jdf, !id %in% c(16379L, 16229L, 15603L, 16746L, 16963L, 16933L))
+jdf <- filter(jdf, !id %in% c(16379L, 16229L, 15603L, 16746L, 16963L, 16933L, 17802L))
 
 # add missing 
 
