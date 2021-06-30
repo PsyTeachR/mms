@@ -13,6 +13,7 @@ code {
   font: 20px Century, serif;
   text-align: center;
   line-height: 25px;
+  box-shadow: 1px 1px 2px #666, inset 0 0 5px #666;
 }
 .mm.red { background-color: #C5463D; }
 .mm.orange { background-color: #F67B3C; }
