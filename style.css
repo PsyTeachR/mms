@@ -19,22 +19,6 @@ div.navbar {
               0 -18px 0 0px var(--pink);
 }
 
-.navbar-default {
-  background-color: var(--grey);
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-brand:active,
-.navbar-default .navbar-nav > li > a:active {
-  color: white;
-}
-
-a, a:link, a:visited, a:hover  {
-  color: var(--blue);
-  text-decoration-color: var(--blue);
-}
-
 code {
   color: #6666FF !important;
 }

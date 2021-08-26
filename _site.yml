@@ -5,6 +5,7 @@ output:
   html_document:
     self_contained: no
     theme: 
+      primary: "#127AB2"
       version: 4
     css: style.css
     include:
