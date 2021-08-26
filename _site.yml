@@ -4,7 +4,8 @@ output_dir: "docs"
 output:
   html_document:
     self_contained: no
-    theme: flatly
+    theme: 
+      version: 4
     css: style.css
     include:
       in_header: "header.html"
