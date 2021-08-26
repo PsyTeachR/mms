@@ -158,7 +158,7 @@ jdf$start <- lubridate::ymd_hm(jdf$start, tz = "UTC") %>%
 </style>
 
 <br><br>
-Methods & MetaScience is a journal club and discussion group at the Institute of Neuroscience and Psychology at the University of Glasgow. Meetings are every other week on Wednesdays from 14:00 to 15:00 UK time on Zoom. 
+Methods & MetaScience is a journal club and discussion group organized by the School of Psychology & Neuroscience at the [University of Glasgow](https://www.gla.ac.uk). Meetings are every other week on Wednesdays from 14:00 to 15:00 UK time on Zoom. 
 
 In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Lisa](mailto://lisa.debruine@glasgow.ac.uk) know!
 
