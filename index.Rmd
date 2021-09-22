@@ -208,8 +208,6 @@ past <- filter(schedule, start < Sys.Date()) %>%
 
 ### Upcoming Events
 
-M&Ms is on hiatus for the summer. Please contact Lisa if you're interested in giving a talk or workshop in the autumn!
-
 ```{r, results="asis"}
 if (nrow(future) > 0L) {
   kable(future, escape = FALSE) %>%
