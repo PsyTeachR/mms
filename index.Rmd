@@ -1,6 +1,4 @@
----
-title: "Methods & MetaScience <img src='https://psyteachr.github.io/images/mms_hex.png' align='right' alt='logo' style='width:25%; box-shadow: none; margin-bottom: 0;' />"
----
+<img src='https://psyteachr.github.io/images/mms_hex.png' align='right' alt='logo' style='width:25%; box-shadow: none; margin-bottom: 0;' />
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
@@ -158,13 +156,13 @@ jdf$start <- lubridate::ymd_hm(jdf$start, tz = "UTC") %>%
 </style>
 
 <br><br>
-Methods & MetaScience is a journal club and discussion group organized by the School of Psychology & Neuroscience at the [University of Glasgow](https://www.gla.ac.uk). Meetings are every other week on Wednesdays from 14:00 to 15:00 UK time on Zoom. 
+Methods & MetaScience is a journal club and discussion group organized by the School of Psychology & Neuroscience at the [University of Glasgow](https://www.gla.ac.uk). Meetings are every other week on Wednesdays from 14:00 to 15:00 UK time on Zoom, alternating with [Coding Club](https://psyteachr.github.io/shiny-tutorials/coding_club.html).
 
 In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Lisa](mailto://lisa.debruine@glasgow.ac.uk) know!
 
-Some of our events are open to the public and the zoom link will be posted here if so. Contact [Lisa](mailto://lisa.debruine@glasgow.ac.uk) for access to the Teams channel that has the recordings and zoom links for non-public events if you are  University of Glasgow staff or student.
+Some of our events are open to the public and the zoom link will be posted here if so. Contact [Lisa](mailto://lisa.debruine@glasgow.ac.uk) for access to the Teams channel that has the recordings and zoom links for non-public events if you are University of Glasgow staff or student.
 
-This page is rendered when Lisa remembers, but is not (yet) dynamic. For a dynamically updated list of talks, please see [the events list](http://www.psy.gla.ac.uk/events/index.php?sub=12).
+For a dynamically updated list of talks that you can subscribe to, please see [the events list](https://samoa.dcs.gla.ac.uk/events/series.jsp?series=141).
 
 
 ```{r}
