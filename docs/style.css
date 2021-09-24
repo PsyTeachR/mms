@@ -19,6 +19,11 @@ div.navbar {
               0 -18px 0 0px var(--pink);
 }
 
+button {
+  border-radius: 1em;
+  font-size: 75%;
+}
+
 code {
   color: #6666FF !important;
 }
@@ -51,6 +56,8 @@ img {
 div.abstract {
   display: none;
 }
+
+.abstract { padding-top: 1em; display: none; }
 
 table tr.odd { background-color: hsla(230, 100%, 90%, .3); }
 table tr.even { background-color: hsla(230, 100%, 90%, .1); }

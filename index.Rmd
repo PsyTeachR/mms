@@ -1,4 +1,6 @@
-<img src='https://psyteachr.github.io/images/mms_hex.png' align='right' alt='logo' style='width:25%; box-shadow: none; margin-bottom: 0;' />
+---
+title: "Methods & Meta-Science <img src='https://psyteachr.github.io/images/mms_hex.png' align='right' alt='logo' style='width:25%; box-shadow: none; margin-bottom: 0;' />"
+---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
@@ -35,8 +37,8 @@ jdf <- purrr::map_df(j, function(x) {
 ```{r}
 # fix location
 jdf <- mutate(jdf, Location = case_when(
-  id == 17750 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
-  id == 17771 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
+  #id == 17750 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
+  #id == 17771 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
   start > Sys.Date() & grepl("^Coding Club", title, FALSE) ~ "[Zoom](https://uofglasgow.zoom.us/j/93838448011)",
   id >= 17305 ~ "Zoom",
   TRUE ~ Location
@@ -64,7 +66,7 @@ jdf <- mutate(jdf, resources = case_when(
   id == 17130L ~ "[(slides)](/mms/slides/taylor-estimating-distributional-parameters.pdf)",
   id == 17737 ~ "[(slides)](/mms/slides/UKDS_GettingMostOutofData_02-06-2021.pdf)",
   id == 17747 ~ "[(slides)](/mms/slides/rousselet-bootstrap.pdf)",
-  grepl("^Coding Club", title, FALSE) ~ "[(materials)](https://psyteachr.github.io/shiny-tutorials/coding_club.html)",
+  grepl("^Coding Club", title, FALSE) ~ "[(link)](https://psyteachr.github.io/shiny-tutorials/coding_club.html)",
   TRUE ~ resources
 ))
 
@@ -151,11 +153,6 @@ jdf$start <- lubridate::ymd_hm(jdf$start, tz = "UTC") %>%
 ```
 
 
-<style>
-  .abstract { padding-top: 1em; display: none; }
-</style>
-
-<br><br>
 Methods & MetaScience is a journal club and discussion group organized by the School of Psychology & Neuroscience at the [University of Glasgow](https://www.gla.ac.uk). Meetings are every other week on Wednesdays from 14:00 to 15:00 UK time on Zoom, alternating with [Coding Club](https://psyteachr.github.io/shiny-tutorials/coding_club.html).
 
 In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Lisa](mailto://lisa.debruine@glasgow.ac.uk) know!
@@ -173,7 +170,7 @@ tm <- lubridate::stamp("15:34")
 schedule <- jdf %>%
   mutate(Speaker = ifelse(speaker_url == "", speaker_name, paste0("[", speaker_name, "](", speaker_url,")"))) %>%
   mutate(Speaker = paste0(Speaker, "<br>", speaker_affiliation)) %>%
-  mutate(abstract = ifelse(abstract == "", "", paste0(" <a>(abstract)</a><div class='abstract'>",abstract, "</div>"))) %>%
+  mutate(abstract = ifelse(abstract == "", "", paste0(" <button>abstract</button><div class='abstract'>",abstract, "</div>"))) %>%
   mutate(Title = paste0(title, " ", resources, " ", abstract)) %>%
   #separate(start, c("Date", "start"), sep = "T") %>%
   #separate(end, c("x", "end"), sep = "T") %>%
@@ -246,7 +243,7 @@ kable(past, escape = FALSE) %>%
 <script>
   /* set up abstract toggling */
   $(document).ready(function () {
-    $("a:contains(abstract)").click(function(e) {
+    $("button:contains(abstract)").click(function(e) {
       $(this).next().toggle();
       return false;
     });
