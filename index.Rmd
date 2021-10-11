@@ -57,7 +57,7 @@ jdf <- mutate(jdf, resources = case_when(
   id == 15562 ~ "[R exams](http://www.r-exams.org), [(slides)](/mms/slides/r-exams.pdf)",
   id == 15611 ~ "[Equivalence Testing for Psychological Research](https://doi.org/10.1177/2515245918770963), [Justify Your Alpha](https://psyarxiv.com/9s3y6/), [related blog post](http://daniellakens.blogspot.com/2018/12/testing-whether-observed-data-should.html)",
   id == 16267 ~ "[(slides)](https://osf.io/d3zea/)",
-  id == 16547 ~ "[(slides)](/mms/barr_container/index.html)",
+  id == 16547 ~ "[(slides)](/mms/slides/barr_container.pdf)",
   id == 16659 ~ "[(slides)](/mms/slides/rousselet-interactions.pdf)",
   id == 16758 ~ "[(materials)](https://osf.io/xpskm/)",
   id == 16759 ~ "[(materials)](https://osf.io/xpskm/)",
