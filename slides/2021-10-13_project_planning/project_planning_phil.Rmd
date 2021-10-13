@@ -1,0 +1,99 @@
+---
+title: "Project Planning"
+author: "Heather Cleland Woods, Phil McAleer, Lisa DeBruine & Kate Reid"
+date: "13/10/2021"
+output:
+  ioslides_presentation: 
+    widescreen: yes
+    css: styles.css
+subtitle: "M&Ms: An ounce of prevention is worth a pound of cure"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Project Planning {#philslides1 .emphasized}
+
+- Think Ahead
+- Think Parallel
+- Think Question not Outcome
+- Think Report not Review
+- Reasons to plan ahead
+
+## Think Ahead {#philslides2 .emphasized}
+
+- know when the deadline is and work back from there.
+    - the deadline tells you when everything must be done by, so set your milestones by that date.
+    - put them in your calendar and share them with supervisor.
+    - avoid thinking about the project in terms once I get A done I will move on to B as time fills up with work and before you know it there is not enough time for X, Y and Z.
+
+## Think Ahead {#philslides3 .emphasized}
+
+- know when will your participants be available.
+    - this tells you when you must be running your study.
+    - if using undergraduate students, probably looking at running January to March.
+    - if using postgraduate students, probably looking January to June. 
+
+## Think Ahead {#philslides4 .emphasized}
+
+- know what your study and data will look like before running the study.
+    - Does the design of your study answer your research question?
+    - Are you collecting data that can answer your research question?
+    - Can you analyse your study?
+    - If your study relies on an analysis that you or your supervisor have never done, is that appropriate?
+    
+## Think Ahead {#philslides5 .emphasized}
+
+- Sketch everything
+    - The best research tool you have prior to running any study is a pencil and a sheet of paper.
+    - sketch your design, sketch your data, sketch your analysis, sketch your write-up.
+    - get it out of your head and make it real
+    - incredibly helpful for spotting issues and for referring back to when unsure.
+    - it does not have to be a good sketch!
+    
+## Think Parallel {#philslides6 .emphasized}
+
+- what can be done whilst you are waiting for something else to happen
+    - waiting for feedback from supervisor on idea, do more reading around the area.
+    - waiting for ethics to be confirmed, get study prepped or write introduction and methods as you now know your plan
+    - waiting for quantitative data to come in, prep analysis code
+    - there is always something that can be done whilst you are waiting.
+    
+## Think Question Not Outcome {#philslides7 .emphasized}
+
+- No dissertation is about finding a significant finding. 
+    - Of course no research should be about that but the field is slow to change. 
+    - Your main goal is to run and present the appropriate design and analysis to answer your research question regardless of outcome.
+- Have your research question and any hypotheses written down from the start. 
+    - refer back to them any time you start to lose big picture.
+    - don't worry about what the study will show, that is not your concern.
+    
+## Think Question Not Outcome {#philslides8 .emphasized}
+
+- The greatest studies are not great because they are complex or show some fancy result. They are great because they are well planned and well thought out.
+
+## Think report and not review {#philslides9 .emphasized}
+
+- Introductions in a journal article contain a review of relevant literature and not a review of all literature.
+    - avoid writing about every study in an area and stick to what builds your research question and justification.
+- Read journal articles for style as well as content.
+    - two different approaches to reading and both are equally as important
+    - when you read an article that you liked, make notes about what it is you liked and try to emulate that.
+    
+## Think report and not review {#philslides10}
+
+- adopt approaches to help organise papers you are reading and look into reference managers
+    - QALMRI blog by Dr James Bartlett:<br>
+    [https://bartlettje.github.io/2021-10-06-learning-to-read-scientific-journal-articles/](https://bartlettje.github.io/2021-10-06-learning-to-read-scientific-journal-articles/)
+    - Endnote:<br> 
+    [https://www.gla.ac.uk/myglasgow/library/help/endnote/](https://www.gla.ac.uk/myglasgow/library/help/endnote/) 
+    - Others:<br>
+    [https://www.gla.ac.uk/myglasgow/library/help/endnote/similarsoftware/](https://www.gla.ac.uk/myglasgow/library/help/endnote/similarsoftware/)
+
+## Reasons to Plan Ahead {#philslides11 .emphasized}
+
+- make running your study easier and less stressful
+    - reduce the unexpected.
+- there are million reasons work does not get published but methodological design and analysis shoud not be one of them
+    - this is something we as researchers have full control over when we **plan ahead**.

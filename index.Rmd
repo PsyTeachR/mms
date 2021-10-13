@@ -7,14 +7,23 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 library(jsonlite)
 library(kableExtra)
 library(tidyverse)
+```
+
+
+```{r}
 # load in current list
-url <- "https://samoa.dcs.gla.ac.uk/events/rest/Event/getgroupevents/141?includeChildren=false&startDate=2018-01-01T00%3A00%3A00.000Z"
-j <- read_json(url)
+
+# workaround for Lisa's httr problems
+h <- curl::new_handle(ssl_verifypeer = 0)
+url1 <- "https://samoa.dcs.gla.ac.uk/events/rest/Event/getgroupevents/141?includeChildren=false&startDate=2018-01-01T00%3A00%3A00.000Z"
+j1_file <- curl::curl_download(url1, "j1.json", handle = h)
+j1 <- read_json(j1_file)
 
 url2 <- "https://samoa.dcs.gla.ac.uk/events/rest/Event/getgroupevents/169?includeChildren=false&startDate=2018-01-01T00%3A00%3A00.000Z"
-j2 <- read_json(url2)
+j2_file <- curl::curl_download(url2, "j2.json", handle = h)
+j2 <- read_json(j2_file)
 
-j <- c(j, j2)
+j <- c(j1, j2)
 
 # map to a data frame
 jdf <- purrr::map_df(j, function(x) {
@@ -37,8 +46,8 @@ jdf <- purrr::map_df(j, function(x) {
 ```{r}
 # fix location
 jdf <- mutate(jdf, Location = case_when(
-  #id == 17750 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
-  #id == 17771 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
+  id == 17924 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
+  id == 17872 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
   start > Sys.Date() & grepl("^Coding Club", title, FALSE) ~ "[Zoom](https://uofglasgow.zoom.us/j/93838448011)",
   id >= 17305 ~ "Zoom",
   TRUE ~ Location
@@ -48,8 +57,8 @@ jdf <- mutate(jdf, Location = case_when(
 
 ```{r}
 # add resources
-
 jdf <- mutate(jdf, resources = case_when(
+  id == 17924 ~ "[(slides)](slides/2021-10-13_project_planning/project_planning.pdf)",
   id == 15409 ~ "[formr](https://formr.org/), [(slides)](https://osf.io/gu23h/)",
   id == 15450 ~ "[(slides)](/mms/slides/2018_10_24_Ben_Jones.pdf)",
   id == 15451 ~ "[(tutorial)](https://psyteachr.github.io/shiny-tutorials/01-first-app.html)",
