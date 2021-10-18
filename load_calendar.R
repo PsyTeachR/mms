@@ -59,7 +59,7 @@ jdf <- mutate(jdf, resources = case_when(
   id == 17130L ~ "[(slides)](/mms/slides/taylor-estimating-distributional-parameters.pdf)",
   id == 17737 ~ "[(slides)](/mms/slides/UKDS_GettingMostOutofData_02-06-2021.pdf)",
   id == 17747 ~ "[(slides)](/mms/slides/rousselet-bootstrap.pdf)",
-  grepl("^Coding Club", title, FALSE) ~ "[(link)](https://psyteachr.github.io/shiny-tutorials/coding_club.html)",
+  #grepl("^Coding Club", title, FALSE) ~ "[(link)](https://psyteachr.github.io/mms/coding_club.html)",
   TRUE ~ resources
 ))
 

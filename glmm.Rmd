@@ -23,7 +23,7 @@ All sessions will be 16:00 to 17:00 via [Zoom](https://uofglasgow.zoom.us/j/9409
 
 * 2021-11-03 A Gentle Introduction to Generalized Linear Mixed Models
 * 2021-11-17 Generalized Linear Mixed Models for RT data
-* 2021-11-24 Pushback against GLMMs ([Gomila, 2021](https://doi.org/10.1037/xge0000920); [Knief & Forstmeier, 2021](https://doi.org/10.3758/s13428-021-01587-5); [Ryan, Evers & Moore, 2021(https://doi.org/10.1525/collabra.27242))
+* 2021-11-24 Pushback against GLMMs ([Gomila, 2021](https://doi.org/10.1037/xge0000920); [Knief & Forstmeier, 2021](https://doi.org/10.3758/s13428-021-01587-5); [Ryan, Evers & Moore, 2021](https://doi.org/10.1525/collabra.27242)
 
 ## Resources
 
