@@ -45,24 +45,35 @@ Before the session:
 
 * make sure you have the R packages shiny, shinydashboard, and tidyverse (these will already be installed if you installed the shinyintro package as mentioned in week 1)
 
-In this second session, we will:
+In this second session, we:
 
-* make a Google form to collect data about something fun
-* set up the UI (user interface) for our app
+* made a [Google form](https://forms.gle/aHPtwTNvrL6L1wb17) to collect data about book recommendations and save it into a public [Google Sheet](https://docs.google.com/spreadsheets/d/1KzLoJSakrpr3nY2KiFMOd9jn1DEwKKNbw2QibnW_aXg/)
+* set up the UI (user interface) for our [app](https://shiny.psy.gla.ac.uk/debruine/bookrecs/)
 
-### 3. Visualising Data
+Resources:
+
+* [session recording](https://uofglasgow.zoom.us/rec/share/No7ZhAvhdx-TwqjuighP1N5kYKyFst1J7Zpz1ZJ2r4GWaSv_uNuTRmnbFnHmm_OL.EzF-oahY_eWDp0UA) (contact Lisa for the password)
+* [code for the app](https://github.com/debruine/bookrecs) (will update as we go)
+* zip file with the [code for our  progress](files/bookrecs1.zip)
+
+### 3. Filtering Data
 
 2021-11-03 14:00 (Europe/London)
 
-In this third session, we ill:
+In this third session, we will:
 
-* create an interactive plot that visualises the form data
+* filter the book table by genre
+* create a dynamic filtering input for location
 
-### 4. Writing Data to a GoogleSheet
+### 4. Visualising Data
 
 2021-11-17 14:00 (Europe/London)
 
-### 5. Filtering Data
+In this fourth session, we will:
+
+* create an interactive plot (maybe a map?) that visualises the form data
+
+### 5. Writing Data to a GoogleSheet
 
 2021-12-01 14:00 (Europe/London)
 

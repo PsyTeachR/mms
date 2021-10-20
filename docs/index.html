@@ -417,12 +417,15 @@ Wed, Nov 17, 2021<br>14:00-15:00
 </tr>
 <tr>
 <td style="text-align:left;width: 20%; ">
-Christoph Scheepers<br>University of Glasgow
+<a href="https://psyteachr.github.io/mms/glmm.html">Christoph Scheepers</a><br>University of Glasgow
 </td>
 <td style="text-align:left;width: 45%; ">
-Generalized Linear Mixed Models for RT data <button>abstract</button>
+Effect size and power in (Generalized) Linear Mixed Models of response time data <button>abstract</button>
 <div class="abstract">
-Part of the GLM series
+<p>In their oft-cited tutorial on power and effect size in mixed effects models, Brysbaert and Stevens (2018; henceforth B&amp;S18) make some important observations about the power of typical RT experiments with counterbalanced repeated-measures designs. They show that the traditional (and by now largely outdated) approach of performing repeated-measures ANOVAs on subject- respectively item-aggregated data tends to grossly over-estimate effect sizes in experiments of this kind. Indeed, when the same data are analysed with more state-of-the-art Linear Mixed Models (LMMs), which require trial-level observations, typical RT effects come out very small by common effect size standards. Based on their simulations, B&amp;S18 recommend that RT experiments with repeated measures at subject and item level should have at least 1,600 observations in each condition (e.g., 40 participants × 40 items per design cell) to ensure sufficient power for small effects.</p>
+<p>However, B&amp;S18 stop short of assessing effect size and power for more advanced alternatives to LMM which, in the context of analysing RT data, not only make more theoretical sense, but also bear the prospect of being more sensitive to cross-condition differences in RT. Indeed, Lo and Andrews (2015) raise a number of points against fitting LMMs to RT data, regardless of whether or not such data are transformed to make them more compliant with the normal distribution requirement in LMM. Instead, they recommend that RT data be modelled via Generalized Linear Mixed Models (GLMMs) of either the Inverse Gaussian or the Gamma model family to more appropriately account for the positive skew in RT distributions. Moreover, they recommend using the Identity link in such models to maintain the assumption of linear relations between predictor and outcome variables.</p>
+<p>In this talk, I will present re-analyses of an ‘overpowered’ dataset (1,020 subjects × 420 items) that was also used in B&amp;S18. I will show that LMMs on raw or transformed RTs produce much smaller estimates of population effect sizes (ds ~ 0.1 for a 16-millisecond priming effect) than Inverse Gaussian or Gamma GLMMs (ds ~ 0.4). This is mainly due to sub-optimal fits achieved by the former: Residuals account for more than 55% of the random variance in LMMs, but for practically 0% in GLMMs (in the latter, virtually all of the random variability in the data is explained by subject- and item-related random effects).</p>
+Implications for power- and meta-analysis will be discussed.
 </div>
 </td>
 <td style="text-align:left;width: 20%; ">
@@ -434,7 +437,7 @@ Zoom
 </tr>
 <tr>
 <td style="text-align:left;width: 20%; ">
-Paper Discussion<br>University of Glasgow
+<a href="https://psyteachr.github.io/mms/glmm.html">Paper Discussion</a><br>University of Glasgow
 </td>
 <td style="text-align:left;width: 45%; ">
 Pushback against GLMMs <button>abstract</button>
