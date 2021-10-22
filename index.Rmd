@@ -10,7 +10,7 @@ library(tidyverse)
 source("load_calendar.R")
 ```
 
-Methods & MetaScience is a journal club and discussion group organized by the School of Psychology & Neuroscience at the [University of Glasgow](https://www.gla.ac.uk). Meetings are every week on Wednesdays from 16:00 to 17:00 UK time on Zoom. [Coding Club](coding_club.html) meets every other Wednesday from 14:00 to 15:00.
+Methods & MetaScience is a journal club and discussion group organized by the School of Psychology & Neuroscience at the [University of Glasgow](https://www.gla.ac.uk). Meetings are every Wednesday from 16:00 to 17:00 UK time on Zoom. [Coding Club](coding_club.html) meets every Wednesday from 14:00 to 15:00.
 
 In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Lisa](mailto://lisa.debruine@glasgow.ac.uk) know!
 

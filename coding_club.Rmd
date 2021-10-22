@@ -67,19 +67,47 @@ In this third session, we will:
 
 ### 4. Visualising Data
 
-2021-11-17 14:00 (Europe/London)
+2021-11-10 14:00 (Europe/London)
 
 In this fourth session, we will:
 
 * create an interactive plot (maybe a map?) that visualises the form data
 
-### 5. Writing Data to a GoogleSheet
+### 5. Input Interface
+
+2021-11-24 14:00 (Europe/London)
+
+In this fifth session, we will:
+
+* create an input tab so people can add their ratings of the books
+
+### 6. Writing Data to a GoogleSheet
 
 2021-12-01 14:00 (Europe/London)
 
-### 6. Make it Pretty
+In this sixth session, we will:
+
+* write the rating data to another google sheet
+* read in the saved rating data and join it to the book table
+* add filters by average rating
+
+### 7. Make it Functional
+
+2021-12-08 14:00 (Europe/London)
+
+In this seventh session, we will:
+
+* make sure the user interface has a clear design
+* add help messages
+* clean user inputs
+
+### 8. Make it Pretty
 
 2021-12-15 14:00 (Europe/London)
+
+In this seventh session, we will:
+
+* use CSS to change the style of the app
 
 ---------
 
