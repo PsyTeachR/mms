@@ -1,4 +1,5 @@
 library(jsonlite)
+library(tidyverse)
 
 # load in current list ----
 
@@ -93,7 +94,7 @@ glasgow_speakers <- c("Lisa DeBruine", "Dale Barr", "Ben Jones", "Benedict Jones
 
 
 ## add speaker URLs ----
-jdf <- mutate(jdf, speaker_url = case_when(
+jdf <- mutate(jdf, speaker_url = ifelse(speaker_url == "", case_when(
   speaker_name == "Lisa DeBruine" ~ "https://debruine.github.io",
   speaker_name == "Dale Barr" ~ "https://twitter.com/dalejbarr/",
   speaker_name == "Robin Ince" ~ "http://www.robinince.net",
@@ -115,7 +116,7 @@ jdf <- mutate(jdf, speaker_url = case_when(
   speaker_name == "Alba Contreras Cuevas" ~ "https://es.linkedin.com/in/alba-contreras-cuevas-9a57a17b",
   speaker_name == "" ~ "",
   TRUE ~ speaker_url
-)) %>%
+), speaker_url)) %>%
   mutate(speaker_affiliation = case_when(
     speaker_name %in% glasgow_speakers ~ "University of Glasgow",
     TRUE ~ speaker_affiliation
