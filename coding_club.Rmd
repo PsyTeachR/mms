@@ -60,10 +60,18 @@ Resources:
 
 2021-11-03 14:00 (Europe/London)
 
-In this third session, we will:
+In this third session, we:
 
-* filter the book table by genre
-* create a dynamic filtering input for location
+* selected columns to display
+* filtered the book table by genre
+
+You can work on your own to add filtering for language  and/or page length. Remember that all the columns are character columns and you need to deal with the page number entry that contains non-numeric characters.
+
+Resources:
+
+* [session recording](https://uofglasgow.zoom.us/rec/share/5dbyA_Uah2D7QvOhc9KYnt7wMI_iXniEho_hTDaRgHib8XZqy5PBclM2GJqE_62M._nwIaVJNherl5r8B) (contact Lisa for the password)
+* [code for the app](https://github.com/debruine/bookrecs) (will update as we go)
+* zip file with the [code for our  progress](files/bookrecs2.zip)
 
 ### 4. Visualising Data
 
@@ -72,6 +80,8 @@ In this third session, we will:
 In this fourth session, we will:
 
 * create an interactive plot (maybe a map?) that visualises the form data
+
+**NO MEETING 2021-11-17**
 
 ### 5. Input Interface
 
