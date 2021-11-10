@@ -73,13 +73,20 @@ Resources:
 * [code for the app](https://github.com/debruine/bookrecs) (will update as we go)
 * zip file with the [code for our  progress](files/bookrecs2.zip)
 
-### 4. Visualising Data
+### 4. Filtering Data 2
 
 2021-11-10 14:00 (Europe/London)
 
-In this fourth session, we will:
+In this fourth session, we:
 
-* create an interactive plot (maybe a map?) that visualises the form data
+* updated the table to DT for text search
+* added select/unselect all buttons for the genre filter
+* added a page length selector
+
+Resources:
+
+* [sesssion recording](https://uofglasgow.zoom.us/rec/share/hXISdgOEVOpjlP26Ob_PnrcJhVdEu4Bp-ZlK3tX4j9nupqYg6V8YvcwYex_k2L9X.Uv-in_02v19AtacW)
+* [code for the app](https://github.com/debruine/bookrecs) (will update as we go)
 
 **NO MEETING 2021-11-17**
 
