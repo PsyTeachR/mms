@@ -1,8 +1,17 @@
 ---
 title: "Coding Club"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
 ---
 
 Coding club is meant to build coding skills in R, HTML, CSS, and JavaScript. You don't need to have any experience apart from basic R. If you can complete the [intro shiny tutorial](https://psyteachr.github.io/shiny-tutorials/01-first-app.html) then you should be fine.
+
+**NO MEETING 2021-11-17 (Lisa was meant to be in NL, but is instead sick, so will be available in the Teams channel for questions)**
+
+**NO MEETING 2021-12-01 Due to the UCU Strike**
 
 ## Database App
 
@@ -88,7 +97,6 @@ Resources:
 * [sesssion recording](https://uofglasgow.zoom.us/rec/share/hXISdgOEVOpjlP26Ob_PnrcJhVdEu4Bp-ZlK3tX4j9nupqYg6V8YvcwYex_k2L9X.Uv-in_02v19AtacW)
 * [code for the app](https://github.com/debruine/bookrecs) (will update as we go)
 
-**NO MEETING 2021-11-17**
 
 ### 5. Input Interface
 
@@ -97,18 +105,11 @@ Resources:
 In this fifth session, we will:
 
 * create an input tab so people can add their ratings of the books
-
-### 6. Writing Data to a GoogleSheet
-
-2021-12-01 14:00 (Europe/London)
-
-In this sixth session, we will:
-
 * write the rating data to another google sheet
 * read in the saved rating data and join it to the book table
 * add filters by average rating
 
-### 7. Make it Functional
+### 6. Make it Functional
 
 2021-12-08 14:00 (Europe/London)
 
@@ -118,7 +119,7 @@ In this seventh session, we will:
 * add help messages
 * clean user inputs
 
-### 8. Make it Pretty
+### 7. Make it Pretty
 
 2021-12-15 14:00 (Europe/London)
 
@@ -128,7 +129,6 @@ In this last session, we will:
 
 ---------
 
-# Past Sessions
 
 ## Distribution Simulation App
 

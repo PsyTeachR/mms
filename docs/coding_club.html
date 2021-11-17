@@ -21,6 +21,9 @@
 <script src="site_libs/bs3compat-0.3.1.9000/transition.js"></script>
 <script src="site_libs/bs3compat-0.3.1.9000/tabs.js"></script>
 <script src="site_libs/bs3compat-0.3.1.9000/bs3compat.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -228,6 +231,75 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
 
 </head>
 
@@ -235,6 +307,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -281,6 +363,8 @@ $(document).ready(function () {
 
 
 <p>Coding club is meant to build coding skills in R, HTML, CSS, and JavaScript. You don’t need to have any experience apart from basic R. If you can complete the <a href="https://psyteachr.github.io/shiny-tutorials/01-first-app.html">intro shiny tutorial</a> then you should be fine.</p>
+<p><strong>NO MEETING 2021-11-17 (Lisa was meant to be in NL, but is instead sick, so will be available in the Teams channel for questions)</strong></p>
+<p><strong>NO MEETING 2021-12-01 Due to the UCU Strike</strong></p>
 <div id="database-app" class="section level2">
 <h2>Database App</h2>
 <p>In autumn 2021, we’ll be making a custom web app for searching, visualising and updating a list of anything you’re interested in. The focus will be learning by doing, but the sessions will be supported by material from <a href="https://debruine.github.io/shinyintro/">Building Web Apps with R Shiny</a>.</p>
@@ -358,7 +442,6 @@ devtools::install_github(&quot;debruine/shinyintro&quot;)</code></pre>
 <li><a href="https://uofglasgow.zoom.us/rec/share/hXISdgOEVOpjlP26Ob_PnrcJhVdEu4Bp-ZlK3tX4j9nupqYg6V8YvcwYex_k2L9X.Uv-in_02v19AtacW">sesssion recording</a></li>
 <li><a href="https://github.com/debruine/bookrecs">code for the app</a> (will update as we go)</li>
 </ul>
-<p><strong>NO MEETING 2021-11-17</strong></p>
 </div>
 <div id="input-interface" class="section level3">
 <h3>5. Input Interface</h3>
@@ -366,20 +449,13 @@ devtools::install_github(&quot;debruine/shinyintro&quot;)</code></pre>
 <p>In this fifth session, we will:</p>
 <ul>
 <li>create an input tab so people can add their ratings of the books</li>
-</ul>
-</div>
-<div id="writing-data-to-a-googlesheet" class="section level3">
-<h3>6. Writing Data to a GoogleSheet</h3>
-<p>2021-12-01 14:00 (Europe/London)</p>
-<p>In this sixth session, we will:</p>
-<ul>
 <li>write the rating data to another google sheet</li>
 <li>read in the saved rating data and join it to the book table</li>
 <li>add filters by average rating</li>
 </ul>
 </div>
 <div id="make-it-functional" class="section level3">
-<h3>7. Make it Functional</h3>
+<h3>6. Make it Functional</h3>
 <p>2021-12-08 14:00 (Europe/London)</p>
 <p>In this seventh session, we will:</p>
 <ul>
@@ -389,7 +465,7 @@ devtools::install_github(&quot;debruine/shinyintro&quot;)</code></pre>
 </ul>
 </div>
 <div id="make-it-pretty" class="section level3">
-<h3>8. Make it Pretty</h3>
+<h3>7. Make it Pretty</h3>
 <p>2021-12-15 14:00 (Europe/London)</p>
 <p>In this last session, we will:</p>
 <ul>
@@ -398,8 +474,6 @@ devtools::install_github(&quot;debruine/shinyintro&quot;)</code></pre>
 <hr />
 </div>
 </div>
-<div id="past-sessions" class="section level1">
-<h1>Past Sessions</h1>
 <div id="distribution-simulation-app" class="section level2">
 <h2>Distribution Simulation App</h2>
 <div id="setting-up-the-framework-1" class="section level3">
@@ -558,10 +632,11 @@ devtools::install_github(&quot;debruine/shinyintro&quot;)</code></pre>
 </ul>
 </div>
 </div>
+
+
+
 </div>
-
-
-
+</div>
 
 </div>
 
@@ -594,6 +669,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

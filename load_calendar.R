@@ -65,20 +65,38 @@ jdf <- mutate(jdf, resources = case_when(
 ))
 
 # delete cancelled talks ----
-jdf <- filter(jdf, !id %in% c(16379L, 16229L, 15603L, 16746L, 16963L, 16933L, 17802L))
+jdf <- filter(jdf, !id %in% c(16379L, 16229L, 15603L, 16746L, 16963L, 16933L, 17802L, 17967L, 17968L))
 
 # add missing  ----
 
-jdf <- add_row(jdf,
-               speaker_name = "Daniël Lakens", 
-               speaker_url = "https://twitter.com/lakens", 
-               speaker_affiliation = "Eindhoven University of Technology",
-               title = "Justify Everything (Or: Why All Norms You Rely on When Doing Research Are Wrong)", 
-               resources = "[(slides)](https://osf.io/j4s3c/)",
-               start = "2019-02-08T15:30", 
-               end = "2019-02-08T16:30", 
-               Location = "62 Hillhead Street, Level 5, Seminar Room",
-               abstract = "Science is difficult. To do good science researchers need to know about philosophy of science, learn how to develop theories, become experts in experimental design, study measurement theory, understand the statistics they require to analyze their data, and clearly communicate their results. My personal goal is to become good enough in all these areas such that I will be able to complete a single flawless experiment, just before I retire – but I expect to fail. In the meantime, I often need to rely on social norms when I make choices as I perform research. From the way I phrase my research question, to how I determine the sample size for a study, or my decision for a one or two-sided test, my justifications are typically ‘this is how we do it’. If you ask me ‘why’ I often don’t know the answer. In this talk I will explain that, regrettably, almost all the norms we rely on are wrong. I will provide some suggestions for attempts to justify aspects of the research cycle that I am somewhat knowledgeable in, mainly in the area of statistics and experimental design. I will discuss the (im)possibility of individually accumulating sufficient knowledge to actually be able to justify all important decisions in the research you do, and make some tentative predictions that in half a century most scientific disciplines will have become massively more collaborative, with a stronger task division between scholars working on joint projects.")
+jdf <- jdf %>%
+  add_row(speaker_name = "Coding Club",
+          speaker_url = "",
+          speaker_affiliation = "",
+          abstract = "",
+          resources = "",
+          Location = "",
+          title = "**Cancelled due to strike**",
+          start = "2021-12-01T14:00", 
+          end = "2019-12-01T15:00") %>%
+add_row(speaker_name = "M&Ms",
+        speaker_url = "",
+        speaker_affiliation = "",
+        abstract = "",
+        resources = "",
+        Location = "",
+        title = "**Cancelled due to strike**",
+        start = "2021-12-01T16:00", 
+        end = "2019-12-01T17:00") %>%
+  add_row(speaker_name = "Daniël Lakens", 
+          speaker_url = "https://twitter.com/lakens", 
+          speaker_affiliation = "Eindhoven University of Technology",
+          title = "Justify Everything (Or: Why All Norms You Rely on When Doing Research Are Wrong)", 
+          resources = "[(slides)](https://osf.io/j4s3c/)",
+          start = "2019-02-08T15:30", 
+          end = "2019-02-08T16:30", 
+          Location = "62 Hillhead Street, Level 5, Seminar Room",
+          abstract = "Science is difficult. To do good science researchers need to know about philosophy of science, learn how to develop theories, become experts in experimental design, study measurement theory, understand the statistics they require to analyze their data, and clearly communicate their results. My personal goal is to become good enough in all these areas such that I will be able to complete a single flawless experiment, just before I retire – but I expect to fail. In the meantime, I often need to rely on social norms when I make choices as I perform research. From the way I phrase my research question, to how I determine the sample size for a study, or my decision for a one or two-sided test, my justifications are typically ‘this is how we do it’. If you ask me ‘why’ I often don’t know the answer. In this talk I will explain that, regrettably, almost all the norms we rely on are wrong. I will provide some suggestions for attempts to justify aspects of the research cycle that I am somewhat knowledgeable in, mainly in the area of statistics and experimental design. I will discuss the (im)possibility of individually accumulating sufficient knowledge to actually be able to justify all important decisions in the research you do, and make some tentative predictions that in half a century most scientific disciplines will have become massively more collaborative, with a stronger task division between scholars working on joint projects.")
 
 
 # check for speakers with no url
