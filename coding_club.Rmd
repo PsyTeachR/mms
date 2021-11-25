@@ -109,6 +109,12 @@ In this fifth session, we will:
 * read in the saved rating data and join it to the book table
 * add filters by average rating
 
+Resources:
+
+* [session recording](https://uofglasgow.zoom.us/rec/share/v38DtAgowwbKSKJz1wMAQQlTyNLhWj6y8ZIb0WnDYhkksfAS4gODmUafAs5Kb6XX.jLqqVJaLPp7f_HMo)
+* [code for the app](https://github.com/debruine/bookrecs) (will update as we go)
+
+
 ### 6. Make it Functional
 
 2021-12-08 14:00 (Europe/London)
