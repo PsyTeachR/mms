@@ -36,6 +36,8 @@ For a dynamically updated list of talks that you can subscribe to, please see [t
 
 See [GLMM Resources](glmm.html) for resources related to our ongoing series on generalised linear mixed effects models.
 
+See [Data Visualisation Resources](dataviz.html) for resources related to our ongoing series on visualising data using graphs and tables.
+
 See [Coding Club](coding_club.html) for resources related to our ongoing series on creating shiny apps.
 
 ```{r, results="asis"}
