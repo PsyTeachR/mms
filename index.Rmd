@@ -18,6 +18,8 @@ Some of our events are open to the public and the zoom link will be posted here 
 
 For a dynamically updated list of talks that you can subscribe to, please see [the events list](https://samoa.dcs.gla.ac.uk/events/series.jsp?series=141).
 
+See [GLMM Resources](glmm.html) for resources related to our series on generalised linear mixed effects models.
+
 
 <span class="red mm">m</span>
 <span class="orange mm">m</span>
@@ -34,11 +36,7 @@ For a dynamically updated list of talks that you can subscribe to, please see [t
 
 ### Upcoming Events
 
-See [GLMM Resources](glmm.html) for resources related to our ongoing series on generalised linear mixed effects models.
-
 See [Data Visualisation Resources](dataviz.html) for resources related to our ongoing series on visualising data using graphs and tables.
-
-See [Coding Club](coding_club.html) for resources related to our ongoing series on creating shiny apps.
 
 ```{r, results="asis"}
 if (nrow(future) > 0L) {
