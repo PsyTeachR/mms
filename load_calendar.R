@@ -34,8 +34,7 @@ jdf <- purrr::map_df(j, function(x) {
 
 # fix location ----
 jdf <- mutate(jdf, Location = case_when(
-  id == 17924 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
-  id == 17872 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
+  id == 18062 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
   start > Sys.Date() & grepl("^Coding Club", title, FALSE) ~ "[Zoom](https://uofglasgow.zoom.us/j/93838448011)",
   id >= 17305 ~ "Zoom",
   TRUE ~ Location
