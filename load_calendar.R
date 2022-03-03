@@ -107,7 +107,7 @@ add_row(speaker_name = "M&Ms",
 
 # fixes for missing info ----
 
-glasgow_speakers <- c("Lisa DeBruine", "Dale Barr", "Ben Jones", "Benedict Jones", "Guillaume Rousselet", "Martin Lages", "Robin Ince and Guillaume Rousselet", "Maria Gardani & Satu Baylan", "Jack Taylor and Lisa DeBruine", "Dr. Jo Neary & Kathryn Machray", "Lawrence Barsalou", "Jack Taylor", "Carolyn Saund", "Robin Ince", "Anna Henschel", "Ruud Hortensius", "Maria Gardani")
+glasgow_speakers <- c("Lisa DeBruine", "Dale Barr", "Ben Jones", "Benedict Jones", "Guillaume Rousselet", "Martin Lages", "Robin Ince and Guillaume Rousselet", "Maria Gardani & Satu Baylan", "Jack Taylor and Lisa DeBruine", "Dr. Jo Neary & Kathryn Machray", "Lawrence Barsalou", "Jack Taylor", "Carolyn Saund", "Robin Ince", "Anna Henschel", "Ruud Hortensius", "Maria Gardani", "Phil McAleer", "James Bartlett")
 
 
 ## add speaker URLs ----
