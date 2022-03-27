@@ -21,12 +21,12 @@ We will be running a series of talks and discussions about data visualisation, i
 
 ![](images/scientific_paper_graph_quality.png){style="float: right; width: 33%; margin-left: 1em;"}
 
-All sessions will be 16:00 to 17:00, except 3/30, which will be 15:00 to 16:00, all via [Zoom](https://uofglasgow.zoom.us/j/94098494960).
+All sessions will be 16:00 to 17:00 via [Zoom](https://uofglasgow.zoom.us/j/94098494960).
 
 * **2022-02-23** Talk / discussion of "The Science of Visual Data Communication: What Works" ([Franconeri et al., 2021](https://journals.sagepub.com/stoken/default+domain/10.1177%2F15291006211051956-FREE/full)). 
 * **2022-03-09** Talk / discussion of "Fooled by beautiful data: Visualization aesthetics bias trust in science, news, and social media" ([Lin & Thornton, 2021](https://psyarxiv.com/dnr9s/)).
-* **2022-03-30** Talk on Data visualisation of high dimensional data.
-* **TBA** Tutorial "Riding tables with {gt} and {gtExtras}" ([Nowak, 2021](https://bjnnowak.netlify.app/2021/10/04/r-beautiful-tables-with-gt-and-gtextras/))
+* **2022-04-06** Tutorial "Riding tables with {gt} and {gtExtras}" ([Nowak, 2021](https://bjnnowak.netlify.app/2021/10/04/r-beautiful-tables-with-gt-and-gtextras/))
+* **Postponed** Talk on Data visualisation of high dimensional data.
 
 ## Resources
 
