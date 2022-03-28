@@ -64,7 +64,7 @@ jdf <- mutate(jdf, resources = case_when(
 ))
 
 # delete cancelled talks ----
-jdf <- filter(jdf, !id %in% c(16379L, 16229L, 15603L, 16746L, 16963L, 16933L, 17802L, 17967L, 17968L))
+jdf <- filter(jdf, !id %in% c(16379L, 16229L, 15603L, 16746L, 16963L, 16933L, 17802L, 17967L, 17968L, 18030L))
 
 # add missing  ----
 
