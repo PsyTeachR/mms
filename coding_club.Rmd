@@ -9,6 +9,29 @@ output:
 
 Coding club is meant to build coding skills in R, HTML, CSS, and JavaScript. You don't need to have any experience apart from basic R. If you can complete the [intro shiny tutorial](https://psyteachr.github.io/shiny-tutorials/01-first-app.html) then you should be fine.
 
+## Autumn 2022: Creating an R Package
+
+We're on hiatus for the summer and will start up again in September (days and times TBD). Our next set of sessions will be making your own R package. Making an R package develops generic coding skills and gives you valuable insight to how R works. We'll cover setting up a package project, creating functions, documenting them with roxygen, creating vignettes, unit testing, package testing, version control with git, and distribution with github.
+
+You will need only very basic R skills. The only people this would not be suitable for are those with zero previous experience in R (unless you know you pick up coding languages quickly). If you can install packages and understand the following code, you should be fine:
+
+```{r}
+library(ggplot2)
+
+df <- data.frame(
+  id = 1:10,
+  name = LETTERS[1:10],
+  score = rnorm(10, mean = 100, sd = 10)
+)
+
+ggplot(df, aes(x = name, y = score)) +
+  geom_point() +
+  theme_minimal()
+
+```
+
+
+
 **NO MEETING 2021-11-17 (Lisa was meant to be in NL, but is instead sick, so will be available in the Teams channel for questions)**
 
 **NO MEETING 2021-12-01 Due to the UCU Strike**

@@ -13,14 +13,14 @@
 
 <title>Coding Club</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.3.1.9000/transition.js"></script>
-<script src="site_libs/bs3compat-0.3.1.9000/tabs.js"></script>
-<script src="site_libs/bs3compat-0.3.1.9000/bs3compat.js"></script>
+<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
+<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
+<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -73,6 +73,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -93,6 +94,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -324,7 +328,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -367,10 +371,36 @@ JavaScript. You don’t need to have any experience apart from basic R. If
 you can complete the <a
 href="https://psyteachr.github.io/shiny-tutorials/01-first-app.html">intro
 shiny tutorial</a> then you should be fine.</p>
+<div id="autumn-2022-creating-an-r-package" class="section level2">
+<h2>Autumn 2022: Creating an R Package</h2>
+<p>We’re on hiatus for the summer and will start up again in September
+(days and times TBD). Our next set of sessions will be making your own R
+package. Making an R package develops generic coding skills and gives
+you valuable insight to how R works. We’ll cover setting up a package
+project, creating functions, documenting them with roxygen, creating
+vignettes, unit testing, package testing, version control with git, and
+distribution with github.</p>
+<p>You will need only very basic R skills. The only people this would
+not be suitable for are those with zero previous experience in R (unless
+you know you pick up coding languages quickly). If you can install
+packages and understand the following code, you should be fine:</p>
+<pre class="r"><code>library(ggplot2)
+
+df &lt;- data.frame(
+  id = 1:10,
+  name = LETTERS[1:10],
+  score = rnorm(10, mean = 100, sd = 10)
+)
+
+ggplot(df, aes(x = name, y = score)) +
+  geom_point() +
+  theme_minimal()</code></pre>
+<p><img src="coding_club_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p><strong>NO MEETING 2021-11-17 (Lisa was meant to be in NL, but is
 instead sick, so will be available in the Teams channel for
 questions)</strong></p>
 <p><strong>NO MEETING 2021-12-01 Due to the UCU Strike</strong></p>
+</div>
 <div id="database-app" class="section level2">
 <h2>Database App</h2>
 <p>In autumn 2021, we’ll be making a custom web app for searching,
