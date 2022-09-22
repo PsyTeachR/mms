@@ -13,14 +13,14 @@
 
 <title>Methods &amp; Meta-Science </title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
-<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
-<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
+<script src="site_libs/bs3compat-0.4.0/transition.js"></script>
+<script src="site_libs/bs3compat-0.4.0/tabs.js"></script>
+<script src="site_libs/bs3compat-0.4.0/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -153,11 +153,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -318,6 +322,102 @@ class="blue mm">m</span> <span class="brown mm">m</span></p>
 <p>See <a href="dataviz.html">Data Visualisation Resources</a> for
 resources related to our ongoing series on visualising data using graphs
 and tables.</p>
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Speaker
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Title
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Date/Time
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Location
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="https://twitter.com/dalejbarr/">Dale Barr</a><br>University of
+Glasgow
+</td>
+<td style="text-align:left;width: 45%; ">
+Brainstorming Meeting
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Oct 05, 2022<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 6, Meeting Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a
+href="https://www.gla.ac.uk/schools/psychologyneuroscience/staff/robinince/">Robin
+Ince</a><br>University of Glasgow
+</td>
+<td style="text-align:left;width: 45%; ">
+Version control for data <button>abstract</button>
+<div class="abstract">
+Git is now widely used for tracking and managing changes to source code
+and text, but systematically tracking changes to data is less common.
+There are now a range of tools available to track data from acquisition,
+through analysis to results. This informal session will give a quick
+overview of tools I looked at to address this problem, including Git
+LFS, git-annex, DVC and Datalad. I briefly cover the features of each of
+these and why I chose DVC. I will then do a short demo of using DVC to
+track changes to data, and keep data in sync between collaborators or
+different computers. You can install DVC if you want to follow along
+(not required): <a href="https://dvc.org/doc/install"
+class="uri">https://dvc.org/doc/install</a> Time permitting, we will
+talk a bit about DVC functionality around defining reproducible analysis
+pipelines.
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Oct 12, 2022<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Zoom
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="https://github.com/code-check-club">Lisa
+DeBruine</a><br>University of Glasgow
+</td>
+<td style="text-align:left;width: 45%; ">
+Intro to Code Review <button>abstract</button>
+<div class="abstract">
+Research transparency and integrity benefit greatly from computationally
+reproducible code, and there is an increasing emphasis on learning the
+skills to code. However, there hasn’t been as much emphasis on learning
+the skills to check code. People cite a lack of time, expertise, and
+incentives as reasons that they don’t ask others to review their
+research code, but the most commonly cited reason was embarrassment for
+others to see their code. In this introductory session, I will cover the
+goals of code review, some key concepts, and present checklists for
+preparing your code to be reviewed and for reviewing others’ code. We
+will also do a mock review of
+<a href="https://code-check-club.github.io/code-check-club/">my own
+code</a>. The hope is that code check sessions can become a regular part
+of the M&amp;Ms seminar series.
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Oct 19, 2022<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 6, Meeting Room
+</td>
+</tr>
+</tbody>
+</table>
 <p><span class="red mm">m</span> <span class="orange mm">m</span> <span
 class="yellow mm">m</span> <span class="green mm">m</span> <span
 class="blue mm">m</span> <span class="brown mm">m</span> <span
@@ -378,7 +478,7 @@ easier.
 Wed, Apr 20, 2022<br>16:00-17:00
 </td>
 <td style="text-align:left;width: 15%; ">
-<a href="https://uofglasgow.zoom.us/j/94098494960">Zoom</a>
+Zoom
 </td>
 </tr>
 <tr>

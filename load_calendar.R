@@ -34,10 +34,12 @@ jdf <- purrr::map_df(j, function(x) {
 
 # fix location ----
 jdf <- mutate(jdf, Location = case_when(
-  id == 18094 ~ "[Zoom](https://uofglasgow.zoom.us/j/94098494960)",
-  start > Sys.Date() & grepl("^Coding Club", title, FALSE) ~ "[Zoom](https://uofglasgow.zoom.us/j/93838448011)",
-  id >= 17305 ~ "Zoom",
-  TRUE ~ Location
+ # start > Sys.Date() & grepl("^Coding Club", title, FALSE) ~ "[Zoom](https://uofglasgow.zoom.us/j/93838448011)",
+  id >= 17305 & id < 18270 ~ "Zoom",
+  id == 18270 ~ "Zoom",
+  id == 18271 ~ "62 Hillhead Street, Level 6, Meeting Room",
+  id == 18274 ~ "62 Hillhead Street, Level 6, Meeting Room",
+  TRUE ~ Location 
 ))
 
 # add resources ----
@@ -149,7 +151,7 @@ jdf$start <- lubridate::ymd_hm(jdf$start, tz = "UTC") %>%
   lubridate::with_tz("Europe/London")
 
 
-## generat schedule ----
+## generate schedule ----
 sf <- lubridate::stamp("Wed, Jan 17, 1999")
 tm <- lubridate::stamp("15:34")
 
