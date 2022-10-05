@@ -15,11 +15,13 @@ If you can complete the [intro shiny tutorial](https://psyteachr.github.io/shiny
 
 ## Autumn 2022: Creating an R Package
 
-We're on hiatus for the summer and will start up again in October (Wednesdays from 16:05 to 17:00 UK time from October 5 to December 7). 
+Wednesdays from 16:05 to 17:00 UK time from October 5 to December 7. 
 
 Our next set of sessions will be making your own R package. Making an R package develops generic coding skills and gives you valuable insight to how R works. We'll cover setting up a package project, creating functions, documenting them with roxygen, creating vignettes, unit testing, package testing, version control with git, and distribution with github.
 
 [Register on Eventbrite](https://coding-club-packages.eventbrite.co.uk) for free (this just helps us track interest).
+
+[Book/Code](https://psyteachr.github.io/intro-r-pkgs/) -- this will update regularly before sessions to show what we intend to cover, and after sessions to document what we did actually cover.
 
 You will need only very basic R skills and a willingness to learn. The only people this would not be suitable for are those with zero previous experience in R (unless you know you pick up coding languages quickly). If you can install packages and understand the following code, you should be fine:
 
