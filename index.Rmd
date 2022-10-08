@@ -12,13 +12,17 @@ source("load_calendar.R")
 
 Methods & MetaScience is a journal club and discussion group organized by the School of Psychology & Neuroscience at the [University of Glasgow](https://www.gla.ac.uk). Meetings are every Wednesday from 12:00 to 13:00 UK time on Zoom. [Coding Club](coding_club.html) meets every Wednesday from 16:05 to 17:00.
 
-In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Lisa](mailto://lisa.debruine@glasgow.ac.uk) know!
+In addition to talks, we also run training events. If you would like to present or run a training workshop, please let [Dale](mailto://dale.barr@glasgow.ac.uk) know!
 
-Some of our events are open to the public and the zoom link will be posted here if so. Contact [Lisa](mailto://lisa.debruine@glasgow.ac.uk) for access to the Teams channel that has the recordings and zoom links for non-public events if you are University of Glasgow staff or student.
+Some of our events are open to the public and the zoom link will be posted here if so. Contact [Dale](mailto://dale.barr@glasgow.ac.uk) for access to the Teams channel that has the recordings and zoom links for non-public events if you are University of Glasgow staff or student.
 
-For a dynamically updated list of talks that you can subscribe to, please see [the events list](https://samoa.dcs.gla.ac.uk/events/series.jsp?series=141).
+For a dynamically updated list of talks that you can subscribe to, please see the events list for [M&Ms](https://samoa.dcs.gla.ac.uk/events/series.jsp?series=141) or [Coding Club](https://samoa.dcs.gla.ac.uk/events/series.jsp?series=189).
+
+### Series
 
 See [GLMM Resources](glmm.html) for resources related to our series on generalised linear mixed effects models.
+
+See [Data Visualisation Resources](dataviz.html) for resources related to visualising data using graphs and tables.
 
 
 <span class="red mm">m</span>
@@ -35,8 +39,6 @@ See [GLMM Resources](glmm.html) for resources related to our series on generalis
 <span class="brown mm">m</span>
 
 ### Upcoming Events
-
-See [Data Visualisation Resources](dataviz.html) for resources related to our ongoing series on visualising data using graphs and tables.
 
 ```{r, results="asis"}
 if (nrow(future) > 0L) {

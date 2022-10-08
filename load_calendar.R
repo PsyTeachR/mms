@@ -36,9 +36,10 @@ jdf <- purrr::map_df(j, function(x) {
 jdf <- mutate(jdf, Location = case_when(
  # start > Sys.Date() & grepl("^Coding Club", title, FALSE) ~ "[Zoom](https://uofglasgow.zoom.us/j/93838448011)",
   id >= 17305 & id < 18270 ~ "Zoom",
-  id == 18270 ~ "Zoom",
+  id == 18270 ~ "Zoom (broadcast in the Level 5, Seminar Room)",
   id == 18271 ~ "62 Hillhead Street, Level 6, Meeting Room",
   id == 18274 ~ "62 Hillhead Street, Level 6, Meeting Room",
+  id == 'Other/unknown' ~ "62 Hillhead Street, Level 5, Seminar Room",
   TRUE ~ Location 
 ))
 
