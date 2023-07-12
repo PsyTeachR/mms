@@ -1,5 +1,5 @@
 ---
-title: "Methods & Meta-Science <img src='https://psyteachr.github.io/images/mms_hex.png' align='right' alt='logo' style='width:25%; box-shadow: none; margin-bottom: 0;' />"
+title: "Methods & Meta-Science <img src='images/mms_hex.png' align='right' alt='logo' style='width:25%; box-shadow: none; margin-bottom: 0;' />"
 ---
 
 ```{r setup, include=FALSE}
