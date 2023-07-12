@@ -13,21 +13,21 @@
 
 <title>Methods &amp; Meta-Science </title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.4.0/transition.js"></script>
-<script src="site_libs/bs3compat-0.4.0/tabs.js"></script>
-<script src="site_libs/bs3compat-0.4.0/bs3compat.js"></script>
+<script src="site_libs/bs3compat-0.4.2/transition.js"></script>
+<script src="site_libs/bs3compat-0.4.2/tabs.js"></script>
+<script src="site_libs/bs3compat-0.4.2/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 <meta property="og:title" content="Methods & MetaScience Seminar">
 <meta property="og:description" content="Schedule and material for the Methods & MetaScience seminar series for the University of Glasgow's Institute of Neuroscience and Psychology">
 <meta property="og:image" content="https://psyteachr.github.io/images/twitter/mms.png">
@@ -190,8 +190,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -199,16 +199,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -326,133 +319,6 @@ class="blue mm">m</span> <span class="brown mm">m</span></p>
 </div>
 <div id="upcoming-events" class="section level3">
 <h3>Upcoming Events</h3>
-<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
-Speaker
-</th>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
-Title
-</th>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
-Date/Time
-</th>
-<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
-Location
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;width: 20%; ">
-Elaine Jackson and Martin Lages<br>
-</td>
-<td style="text-align:left;width: 45%; ">
-A Meta-Analysis on Juror Decisions <button>abstract</button>
-<div class="abstract">
-We are interested in whether the English verdict system (guilty/not
-guilty) and Scottish verdict system (guilty/not proven/not guilty)
-affects conviction rates as reported in ten studies with different crime
-types (e.g., murder, assault, rape) and a total of 1,986 jurors. The
-results of a logistic regression with mixed effects suggest a
-significant decrease of convictions for the Scottish compared to the
-English verdict system. We discuss some implications of this result.
-</div>
-</td>
-<td style="text-align:left;width: 20%; ">
-Wed, Nov 02, 2022<br>12:00-13:00
-</td>
-<td style="text-align:left;width: 15%; ">
-Level 5, Seminar Room
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 20%; ">
-Alistair Beith<br>University of Glasgow
-</td>
-<td style="text-align:left;width: 45%; ">
-Building Online Auditory Experiments with Accurate Reaction Times
-<button>abstract</button>
-<div class="abstract">
-<p>How much trust are you willing to put in the audio equipment that a
-participant uses to take part in your online study? Many experiment
-building tools create studies that perform well in the lab but with no
-way of knowing how they perform in the wild. The solution to this
-problem is not just to improve the performance, but also to measure
-it.</p>
-This tutorial will present a selection of tools for building your own
-auditory experiments with jsPsych and measuring the timing accuracy of
-responses. With these tools you can present auditory stimuli with sample
-level precision and collect responses with well defined errors. No
-knowledge of jsPsych or participation is required.
-</div>
-</td>
-<td style="text-align:left;width: 20%; ">
-Wed, Nov 09, 2022<br>12:00-13:00
-</td>
-<td style="text-align:left;width: 15%; ">
-Level 5, Seminar Room
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 20%; ">
-James Bartlett<br>University of Glasgow
-</td>
-<td style="text-align:left;width: 45%; ">
-APA-style manuscripts with RMarkdown and papaja
-</td>
-<td style="text-align:left;width: 20%; ">
-Wed, Nov 16, 2022<br>12:00-13:00
-</td>
-<td style="text-align:left;width: 15%; ">
-Level 5, Seminar Room
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 20%; ">
-Christoph Daube<br>
-</td>
-<td style="text-align:left;width: 45%; ">
-something something neuroimaging related (paper discussion)
-</td>
-<td style="text-align:left;width: 20%; ">
-Wed, Nov 23, 2022<br>12:00-13:00
-</td>
-<td style="text-align:left;width: 15%; ">
-Level 5, Seminar Room
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 20%; ">
-Juliane Kloidt<br>
-</td>
-<td style="text-align:left;width: 45%; ">
-structural equation modelling
-</td>
-<td style="text-align:left;width: 20%; ">
-Wed, Nov 30, 2022<br>12:00-13:00
-</td>
-<td style="text-align:left;width: 15%; ">
-Level 5, Seminar Room
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 20%; ">
-Christoph Scheepers &amp; Dale Barr<br>
-</td>
-<td style="text-align:left;width: 45%; ">
-Nonconvergence and other delights of linear mixed-effects modelling
-</td>
-<td style="text-align:left;width: 20%; ">
-Wed, Dec 07, 2022<br>12:00-13:00
-</td>
-<td style="text-align:left;width: 15%; ">
-Level 5, Seminar Room
-</td>
-</tr>
-</tbody>
-</table>
 <p><span class="red mm">m</span> <span class="orange mm">m</span> <span
 class="yellow mm">m</span> <span class="green mm">m</span> <span
 class="blue mm">m</span> <span class="brown mm">m</span> <span
@@ -480,6 +346,773 @@ Location
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Jinghui Liang<br>
+</td>
+<td style="text-align:left;width: 45%; ">
+Discussion: Simulating autocorrelated questionnaire datasets
+<button>abstract</button>
+<div class="abstract">
+<p>Time-series effects in questionnaire item responses (e.g., practice
+effects, mental fatigue) lead to autocorrelated residual structures in
+datasets. In traditional psychometrics analytical methods, such
+structures are difficult to be recognized since they are washed out on
+the subject level. By non-linear modelling techniques and
+quasi-randomized experimental design strategies, we found that the
+autocorrelated components for each subject can be captured and
+deconfounded from the mixture of effects. To examine the capacities of
+some design strategies in controlling autocorrelated residuals, we would
+like to develop functions to apply Monte Carlo simulation analysis to
+the questionnaire dataset. However, we found it challenging. In this
+talk, I will briefly demonstrate how to simulate a common questionnaire
+dataset in an ideal scenario and lead the discussion about possible
+solutions to simulate questionnaire datasets with autocorrelated
+residual structures.</p>
+[from the organizer:] We prefer in-person attendance when possible. If
+you require remote attendance, use the Zoom link below. Please note that
+we have a ‘cameras on’ policy for remote attendees. [Zoom link hidden.
+Please log in to view it, or contact the event organiser]
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Jun 28, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 6, Meeting Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Camilo Rodriguez Ronderos<br>University of Oslo
+</td>
+<td style="text-align:left;width: 45%; ">
+What pupillometry can tell us about lexical pragmatics: The case of
+imprecision <button>abstract</button>
+<div class="abstract">
+<p>Theoretical accounts of imprecision (e.g., saying that a line is
+straight when it is not ‘perfectly’ straight) claim that this is a type
+of pragmatic adjustment licensed by context. However, it is unclear how
+this adjustment translates to online sentence processing: Does it
+require more mental effort to understand imprecise relative to precise
+usages of the word ‘straight’? In this talk I will present evidence from
+pupillometry in support of theoretical accounts of the pragmatics of
+imprecision. I will also discuss possible linking hypotheses between
+pupil dilation and comprehension of pragmatics with the goal of better
+understanding the temporal dynamics of lexical pragmatic processing.</p>
+[from the organiser:] We prefer in-person attendance when possible. If
+you require remote attendance, use the Zoom link below. Please note that
+we have a ‘cameras on’ policy for remote attendees. [Zoom link hidden.
+Please log in to view it, or contact the event organiser]
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Jun 21, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="https://twitter.com/dalejbarr/">Dale Barr</a><br>University of
+Glasgow
+</td>
+<td style="text-align:left;width: 45%; ">
+Analysing circular data <button>abstract</button>
+<div class="abstract">
+<p>For this session, I will summarize and lead discussion of the
+following paper:</p>
+<p>Cremers &amp; Klugkist (2018). One direction? A Tutorial for Circular
+Data Analysis Using R With Examples in Cognitive Psychology. Frontiers
+In Psychology. <a href="https://doi.org/10.3389/fpsyg.2018.02040"
+class="uri">https://doi.org/10.3389/fpsyg.2018.02040</a></p>
+<p>The event will take place in person, but we also offer limited places
+for remote attendance (via Zoom). If you need to attend remotely, please
+obtain a ticket via EventBrite: <a
+href="https://www.eventbrite.co.uk/e/mms-modelling-circular-data-tickets-630921431987"
+class="uri">https://www.eventbrite.co.uk/e/mms-modelling-circular-data-tickets-630921431987</a></p>
+ABSTRACT: Circular data is data that is measured on a circle in degrees
+or radians. It is fundamentally different from linear data due to its
+periodic nature (0° = 360°). Circular data arises in a large variety of
+research fields. Among others in ecology, the medical sciences,
+personality measurement, educational science, sociology, and political
+science circular data is collected. The most direct examples of circular
+data within the social sciences arise in cognitive and experimental
+psychology. However, despite numerous examples of circular data being
+collected in different areas of cognitive and experimental psychology,
+the knowledge of this type of data is not well-spread and literature in
+which these types of data are analyzed using methods for circular data
+is relatively scarce. This paper therefore aims to give a tutorial in
+working with and analyzing circular data to researchers in cognitive
+psychology and the social sciences in general. It will do so by focusing
+on data inspection, model fit, estimation and hypothesis testing for two
+specific models for circular data using packages from the statistical
+programming language R.
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, May 24, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Discussion<br>
+</td>
+<td style="text-align:left;width: 45%; ">
+“Investigating Lay Perceptions of Psychological Measures” by Mason,
+Pownall, Palmer, &amp; Azevedo <button>abstract</button>
+<div class="abstract">
+<p>James Bartlett will lead discussion of the preprint, “Investigating
+Lay Perceptions of Psychological Measures” by Mason, Pownall, Palmer,
+&amp; Azevedo.</p>
+<p>Link: <a href="https://psyarxiv.com/jf58q"
+class="uri">https://psyarxiv.com/jf58q</a></p>
+<p>Abstract of the preprint: In recent years, the reliability and
+validity of psychology measurement practices has been called into
+question, as part of an ongoing reappraisal of the robustness,
+reproducibility, and transparency of psychological research. While
+useful progress has been made, to date, the majority of discussions
+surrounding psychology’s measurement crisis have involved technical,
+quantitative investigations into the validity, reliability, and
+statistical robustness of psychological measures. This registered report
+offers a seldom-heard qualitative perspective to these ongoing debates,
+critically exploring members of the general publics’ (i.e., non-experts)
+lay perceptions of widely used measures in psychology. Using a
+combination of cognitive interviews and a think aloud study protocol,
+participants (n = 23) completed one of three popular psychology
+measures. Participants reflected on each of the measures, discussed the
+contents, and provided perceptions of what the measures are designed to
+test. Coding of the think aloud protocols concluded that participants
+across the measures regularly experienced issues in interpreting and
+responding to items. Thematic analysis of the cognitive interviews
+identified three dominant themes that each relate to lay perceptions of
+psychology measurements. These were: (1) participants’ grappling with
+attempting to ‘capture their multiple selves’ in the questionnaires, (2)
+participants perceived the questionnaire method as generally ‘missing
+nuance and richness’ and (3) exposing the ‘hidden labour of
+questionnaires’. These findings are discussed in the context of
+psychology’s measurement reform.</p>
+<p>[from the organiser:] As context for the discussion, you may find it
+useful to read Flake &amp; Fried (2020), “Measurement Schmeasurement:
+Questionable Measurement Practices and How To Avoid Them,” <a
+href="https://psycnet.apa.org/doi/10.1177/2515245920952393"
+class="uri">https://psycnet.apa.org/doi/10.1177/2515245920952393</a></p>
+The event will take place in person, but we also offer limited places
+for remote attendance (via Zoom). If you need to attend remotely, please
+obtain a ticket via EventBrite: <a
+href="https://www.eventbrite.co.uk/e/mms-investigating-lay-perceptions-of-psychological-measures-tickets-630913468167"
+class="uri">https://www.eventbrite.co.uk/e/mms-investigating-lay-perceptions-of-psychological-measures-tickets-630913468167</a>
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, May 17, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 6, Meeting Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Pablo Arias<br>
+</td>
+<td style="text-align:left;width: 45%; ">
+Manipulating social signals in real time during social interactions
+<button>abstract</button>
+<div class="abstract">
+<p>Over the past few years, we have been developing a new methodology to
+study human social cognition. Specifically, we have been using voice and
+face transformation algorithms to manipulate participants’ social
+signals in real time during social interactions. I will present two
+experiments utilizing this paradigm. First, an experiment where we
+manipulated vocal dominance to study its impact on group
+decision-making. Second, an experiment where we artificially aligned
+participants’ smiles during speed dating to elicit romantic attraction.
+I will explore these studies from a methodological perspective. First, I
+will analyse the types of scientific claims we can make with these
+datasets, as well as the phenomenological differences in comparison to
+non-transformed social interactions. Second, I will highlight the shared
+methodological structures that underlie these research projects—ranging
+from algorithmic specification to manuscript preparation and writing. I
+will conclude by introducing our new, free, and open-source experimental
+platform DuckSoup, which aims to enable researchers to run these kinds
+of experiments online, and which we are currently setting-up in the
+servers of the department.</p>
+[from the organizer:] The event will take place in person, but we also
+offer limited places for remote attendance (via Zoom). If you need to
+attend remotely, please obtain a ticket via EventBrite: <a
+href="https://www.eventbrite.co.uk/e/manipulating-social-signals-in-real-time-during-social-interactions-tickets-626191434437"
+class="uri">https://www.eventbrite.co.uk/e/manipulating-social-signals-in-real-time-during-social-interactions-tickets-626191434437</a>
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, May 03, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Christoph Scheepers<br>
+</td>
+<td style="text-align:left;width: 45%; ">
+On k-means clustering and finding needles in haystacks
+<button>abstract</button>
+<div class="abstract">
+<p>[this event will be online-only rather than in person]</p>
+K-means cluster analysis is an unsupervised machine learning technique
+for the purpose of partitioning N multivariate observations into K (&lt;
+N) clusters, such that each observation belongs to the cluster with the
+nearest mean or cluster centroid. It is one of the simplest and most
+popular techniques for multivariate classification. The number of
+clusters (K) is usually unknown to the researcher and has to be
+estimated on the basis of data-driven optimization criteria (for which
+there are many different suggestions and approaches). There are
+different algorithms to choose from (with Hartigan-Wong being by far the
+most efficient) and an additional nuisance is that the clustering
+results partly depend on starting conditions. In this talk, I will
+compare random initialization methods (randomly select K observations as
+initial cluster centres) with a more deterministic approach to cluster
+initialization. Using a real data set (100 cases, two clustering
+variables), I will show that with increasing K, clustering becomes
+increasingly dependent on random starting conditions (regardless of
+algorithm), such that from a certain number of clusters, random
+initialization becomes a more important determinant of the final
+partitioning than the algorithm itself. Moreover, even a large number of
+random starts (say 100,000) does not always guarantee to find the ‘best’
+partitioning for a given K, as deterministic initialization often finds
+better solutions in a fraction of the time. All of the above has
+important implications for determining the number of clusters in a
+data-driven manner.
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Apr 26, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Christoph Scheepers<br>
+</td>
+<td style="text-align:left;width: 45%; ">
+On k-means clustering and finding needles in haystacks
+<button>abstract</button>
+<div class="abstract">
+K-means cluster analysis is an unsupervised machine learning technique
+for the purpose of partitioning N multivariate observations into K (&lt;
+N) clusters, such that each observation belongs to the cluster with the
+nearest mean or cluster centroid. It is one of the simplest and most
+popular techniques for multivariate classification. The number of
+clusters (K) is usually unknown to the researcher and has to be
+estimated on the basis of data-driven optimization criteria (for which
+there are many different suggestions and approaches). There are
+different algorithms to choose from (with Hartigan-Wong being by far the
+most efficient) and an additional nuisance is that the clustering
+results partly depend on starting conditions. In this talk, I will
+compare random initialization methods (randomly select K observations as
+initial cluster centres) with a more deterministic approach to cluster
+initialization. Using a real data set (100 cases, two clustering
+variables), I will show that with increasing K, clustering becomes
+increasingly dependent on random starting conditions (regardless of
+algorithm), such that from a certain number of clusters, random
+initialization becomes a more important determinant of the final
+partitioning than the algorithm itself. Moreover, even a large number of
+random starts (say 100,000) does not always guarantee to find the ‘best’
+partitioning for a given K, as deterministic initialization often finds
+better solutions in a fraction of the time. All of the above has
+important implications for determining the number of clusters in a
+data-driven manner.
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Apr 19, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Sander van Bree<br>
+</td>
+<td style="text-align:left;width: 45%; ">
+The rise of AI as a tool for writing, coding, and thinking in academia
+<button>abstract</button>
+<div class="abstract">
+<p>If you ask GPT-4 to summarize a body of literature, debug your code,
+recommend a statistical analysis, or sketch your next paper’s
+introduction, it will give you meaningful answers. And with tech
+companies ramping up investments, Large Language Models (LLMs) will only
+get smarter. What does this mean for academic life? In this session, I
+will provide a forward-looking perspective on LLMs, exploring both their
+harms and benefits. On the one hand, productivity will increase, and a
+variety of barriers will disappear. On the other, LLMs might jeopardize
+core academic values such as independent thought—or even represent a
+threat to the future of knowledge work. These and other considerations
+serve to prime an open discussion for people to share their own thoughts
+and opinions, exploring together what consequences AI might have for
+science and academia at large.</p>
+<p>[from the organizer:] To ensure we have adequate time to discuss this
+important topic, the event will run for 90 minutes instead of the usual
+60 minutes.</p>
+<p>Given the potential popularity of this topic, we have reserved the
+Seminar Room (L5) rather than the usual Meeting Room.</p>
+The event will take place in person, but we also offer limited places
+for remote attendance (via Zoom). If you need to attend remotely, please
+obtain a ticket via EventBrite: <a
+href="https://www.eventbrite.co.uk/e/mms-with-sander-van-bree-the-rise-of-ai-in-academia-tickets-596009970867"
+class="uri">https://www.eventbrite.co.uk/e/mms-with-sander-van-bree-the-rise-of-ai-in-academia-tickets-596009970867</a>
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Mar 29, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Simon Hanslmayr<br>
+</td>
+<td style="text-align:left;width: 45%; ">
+Plans for a UofG Neurotech Centre <button>abstract</button>
+<div class="abstract">
+For our meeting this week, we have invited Simon Hanslmayr from CCNi to
+discuss his plans to develop a Centre for Neurotechnology. Come and
+learn about his plans and find out how you might become involved.
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Mar 22, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 6, Meeting Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+James Bartlett<br>University of Glasgow
+</td>
+<td style="text-align:left;width: 45%; ">
+A whole lotta nothing: Comparing statistical approaches to supporting
+the null <button>abstract</button>
+<div class="abstract">
+<p>Traditional frequentist hypothesis tests do not allow us to support
+the null hypothesis. There are scenarios where supporting the null would
+be a desirable inference, but you rarely see researchers use appropriate
+techniques in empirical psychology articles. In this talk, I will
+introduce and compare different approaches to supporting the null such
+as equivalence testing and Bayes factors. I will organise the talk
+around applying different approaches to the same research question and
+data set. I will provide supporting code, so I assume you can
+comfortably use R. A general understanding of Bayesian statistics will
+be useful but I will provide a brief introduction.</p>
+[from the organizer:] This event will take place in person, but remote
+attendance via Zoom is also available. If you wish to attend remotely,
+please obtain a ticket via EventBrite: <a
+href="https://www.eventbrite.co.uk/e/james-bartlett-comparing-statistical-approaches-to-supporting-the-null-tickets-526292173057"
+class="uri">https://www.eventbrite.co.uk/e/james-bartlett-comparing-statistical-approaches-to-supporting-the-null-tickets-526292173057</a>
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Mar 08, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Tarryn Balsdon<br>
+</td>
+<td style="text-align:left;width: 45%; ">
+Pre-registration <button>abstract</button>
+<div class="abstract">
+<p>Pre-registration is the practice of writing out your experimental
+design and plan for data collection and analysis on a register, prior to
+commencing your experiment. I will highlight some of the recent
+discussions about pre-registration and outline how I have found
+pre-registration with the open science framework helpful in my work.</p>
+[message from the organizer:] This will be primarily an in-person
+discussion event. If you need to attend remotely, please sign up on
+EventBrite, and note our ‘cameras on’ policy for remote attendees. <a
+href="https://www.eventbrite.co.uk/e/mms-tarryn-balsdon-pre-registration-tickets-529072669597"
+class="uri">https://www.eventbrite.co.uk/e/mms-tarryn-balsdon-pre-registration-tickets-529072669597</a>
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Mar 01, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<br>
+</td>
+<td style="text-align:left;width: 45%; ">
+Drop-in help session <button>abstract</button>
+<div class="abstract">
+Come to today’s session if you are looking to get advice or discuss any
+aspect related to research methods and statistics. It will be an open
+forum, and all are welcome to attend!
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Feb 22, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="https://ppw.kuleuven.be/cscp/people/00140689">Katie
+Hoemann</a><br>University of Leuven
+</td>
+<td style="text-align:left;width: 45%; ">
+Using multimodal ambulatory sensing to capture emotion in context
+<button>abstract</button>
+<div class="abstract">
+<p>Emotional experience unfolds as people make meaning of their body in
+context. To study this process ‘in the field’ of daily life, I use
+methods of ambulatory sensing capable of dense, multimodal data capture
+and pair these with dynamical and unsupervised analytic techniques. In
+this talk, I present my work using biologically triggered experience
+sampling and machine learning to model situated patterns of
+cardiorespiratory activity and how they map onto self-reported
+experiences and individual differences in emotion. I also present
+current and upcoming work incorporating methods from cognitive and
+computational linguistics to gain insight into descriptions of everyday
+experience and how these may vary across people and cultures.
+Throughout, I consider the potential impacts of these approaches for
+both theory and application – what can they tell us about the dynamics
+of embodied experience and meaning-making, and how might they help us
+tackle pressing social problems?</p>
+[from the organizer:] This event will take place in person, but remote
+participation is also available. If you need to participate remotely,
+please sign up on EventBrite. We have a ‘cameras-on’ policy for remote
+participants. <a
+href="https://www.eventbrite.co.uk/e/mms-katie-hoemann-using-multimodal-ambulatory-sensing-tickets-520334964887"
+class="uri">https://www.eventbrite.co.uk/e/mms-katie-hoemann-using-multimodal-ambulatory-sensing-tickets-520334964887</a>
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Feb 08, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Jinghui Liang<br>
+</td>
+<td style="text-align:left;width: 45%; ">
+Better administration of psychometric surveys with a jsPsych-based
+collection platform <button>abstract</button>
+<div class="abstract">
+<p>Similar to psycholinguistic experiments, participants’ responses to
+questions in questionnaire surveys are affected by time-varying
+fluctuations (e.g., mental fatigue) and contextual effects (e.g.,
+priming effect). Ignoring these effects in analyse will lead to biased
+estimations of reliability and validity since the effects being examined
+are confounded by wording or temporal characteristics. Inspired by
+analysis strategies in experiments, the reaction time (RT) for each
+trial is an efficient index to describe the time-varying fluctuations,
+and (quasi) randomisation/counterbalanced designs for presentation
+orders can offset these effects on subject-level. However, existing
+survey data collection platforms provide very limited flexibility to
+administrate psychometric surveys in this way. In this session, I’ll
+discuss details about these topics and introduce a new platform based on
+jsPsych to collect survey data. With jsPsych and common programming
+languages (R/JavaScript/PHP), this platform provides the possibility to
+collect RT for each question and high flexibility to organise the
+presentation order of a questionnaire. These properties help researchers
+better design and administrate their online survey. A demonstration of
+this platform can be found at <a
+href="https://github.com/Jinghui-Liang/rt_survey_demo"
+class="uri">https://github.com/Jinghui-Liang/rt_survey_demo</a> if you
+are interested in it.</p>
+[from the organizer:] This event will take place in person, but remote
+participation is also available. If you need to participate remotely,
+please sign up on EventBrite. We have a ‘cameras-on’ policy for remote
+participants. <a
+href="https://www.eventbrite.co.uk/e/mms-jinghui-liang-better-administration-of-psychometric-surveys-tickets-520332838527"
+class="uri">https://www.eventbrite.co.uk/e/mms-jinghui-liang-better-administration-of-psychometric-surveys-tickets-520332838527</a>
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Jan 25, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="https://debruine.github.io">Lisa DeBruine</a><br>University of
+Glasgow
+</td>
+<td style="text-align:left;width: 45%; ">
+Workshop on Data Simulation in R using {faux} <button>abstract</button>
+<div class="abstract">
+<p>This session will cover the basics of simulation using {faux}. We
+will simulate data with factorial designs by specifying the within and
+between-subjects factor structure, each cell mean and standard
+deviation, and correlations between cells where appropriate. This can be
+used to create simulated data sets to be used in preparing the analysis
+code for pre-registrations or registered reports. We will also create
+data sets for simulation-based power analyses. Attendees will need to
+have very basic knowledge of R and R Markdown, and have installed
+{faux}, {afex}, {broom} and {tidyverse}.</p>
+<p>Prep Install R packages from CRAN: tidyverse, afex, faux, and broom
+Download files: faux-stub.Rmd</p>
+<p><a href="https://debruine.github.io/data-sim-workshops/"
+class="uri">https://debruine.github.io/data-sim-workshops/</a></p>
+Please bring a laptop if you want to participate. The event will be
+recorded and made available following the event for people who are
+unable to attend.
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Jan 18, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 6, Meeting Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+<a href="https://twitter.com/dalejbarr/">Dale Barr</a><br>University of
+Glasgow
+</td>
+<td style="text-align:left;width: 45%; ">
+Rebuilding Academic Communities After Lockdown: The View From
+Meta-Science <button>abstract</button>
+<div class="abstract">
+<p>[NB: This will be a discussion event that available for in-person
+attendance only]</p>
+The COVID-19 pandemic brought about many changes to academic norms for
+working and associating, changes which seem to have eroded local
+community structure. What does this matter for metascience? I will
+defend the thesis that strong local communities are essential for
+improving research practice. To an isolated researcher, adopting open
+science practices may appear too risky and costly to be worth pursuing.
+In the view of computational social science, such practices are “complex
+contagions” that have dramatically different diffusion requirements as
+compared to simple contagions (e.g., the spread of news or viruses). In
+particular, they require social reinforcement from multiple actors,
+which in turn depends on the existence of dense local connections or
+“wide bridges” (Centola &amp; Macy, 2007). Little is known about how
+these wide bridges come about, but I will present some speculative ideas
+drawn from sociology (specifically, Randall Collins’ Interaction Ritual
+theory) as well as from the psychology of communication that suggests a
+critical role for face-to-face interaction.
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Jan 11, 2023<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 6, Meeting Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Juliane Kloidt<br>
+</td>
+<td style="text-align:left;width: 45%; ">
+[Presentation+Discussion] A conceptual and practical introduction to
+Structural Equation Modelling – Part 2/2 <button>abstract</button>
+<div class="abstract">
+<p>Structural Equation Modelling (SEM) allows researchers to assess
+complex relationships between latent and observed variables, thereby
+specifying direct and mediating effects for multiple dependent
+variables. Whilst SEM has been praised for its analytic flexibility,
+disagreements about “good model fit” persist. The second talk for this
+mini-series presents the six modelling steps of (1) specification, (2)
+identification, (3) estimation, (4) evaluation, (5) re-specification,
+and (6) interpretation. Using worked examples, I will explain how to
+conduct path and mediation analyses, and how to calculate bootstrapped
+effect sizes. Throughout the presentation, I will discuss “good model
+fit” alongside issues of equivalent models, statistical power, and model
+overfitting.</p>
+<p>We will start this talk with a quick recap of last week’s session.
+So, please join us even if you could not attend the first session.</p>
+<table style="width:11%;">
+<colgroup>
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">From the host, Dale Barr: We encourage in-person
+attendance, where possible. If you need to attend remotely, please sign
+up using the EventBrite link. We have a ‘cameras on’ policy for remote
+attendees.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">From the host, Dale Barr: We encourage in-person
+attendance, where possible. If you need to attend remotely, please sign
+up using the EventBrite link. We have a ‘cameras on’ policy for remote
+attendees.</td>
+</tr>
+<tr class="even">
+<td align="center"><a
+href="https://www.eventbrite.co.uk/e/kloidt-introduction-to-structural-equation-modeling-12-tickets-475086214657"
+class="uri">https://www.eventbrite.co.uk/e/kloidt-introduction-to-structural-equation-modeling-12-tickets-475086214657</a></td>
+</tr>
+<tr class="odd">
+<td align="center">In this session we will discuss a preprint by
+Tremblay et al. (“Non-necessary neural activity in the primate cortex”)
+that aims to “challeng[e] one of the fundamental assumptions of
+cognitive neurophysiology”. It shows how single neuron firing in
+prefrontal cortex of macaques predicts a task-relevant decision variable
+across four different tasks. The authors juxtapose this to a previous
+study from their lab where the ablation of that same brain area only
+impaired performance in one of the four tasks. What does the
+electrophysiological signal thus reflect in the three other tasks whose
+performance would be unchanged if the source of the signal was
+removed?</td>
+</tr>
+<tr class="even">
+<td align="center">I will go through the preprint and critically discuss
+their claims. While I think the preprint as such has problems, I am
+sympathetic to its general spirit. I will thus try to transition from
+the details of the preprint to a more general discussion of neuroimaging
+as such. Have we really moved beyond the problems highlighted by
+Tremblay et al.?</td>
+</tr>
+<tr class="odd">
+<td align="center">Paper: <a
+href="https://www.biorxiv.org/content/10.1101/2022.09.12.506984v1"
+class="uri">https://www.biorxiv.org/content/10.1101/2022.09.12.506984v1</a></td>
+</tr>
+</tbody>
+</table>
+<p>Note from Dale Barr, the organizer: This will be a primarily
+in-person discussion event.</p>
+<p>There will be a limited number of spots available for remote
+participation, which you can access through EventBrite:</p>
+<p><a
+href="https://www.eventbrite.co.uk/e/mms-discussion-of-tremblay-et-al-tickets-472172309087"
+class="uri">https://www.eventbrite.co.uk/e/mms-discussion-of-tremblay-et-al-tickets-472172309087</a></p>
+To help everyone feel included, we will ask remote participants to turn
+on their cameras.
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Nov 23, 2022<br>11:00-12:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+James Bartlett<br>University of Glasgow
+</td>
+<td style="text-align:left;width: 45%; ">
+APA-style manuscripts with RMarkdown and papaja
+<button>abstract</button>
+<div class="abstract">
+<p>Preparing manuscripts traditionally includes writing text, pasting
+results, and manually formatting references. In addition to the wasted
+time reformatting manuscripts for different journals, copying and
+pasting results introduces greater potential for error. More researchers
+are sharing data and analysis scripts, but the code might not be
+reproducible. The ability to address all these concerns into one
+workflow may improve efficiency and reduce errors.</p>
+<p>In this tutorial, I will demonstrate the R package papaja (Aust &amp;
+Barth, 2022). This package provides R Markdown templates and functions,
+meaning you can write a fully reproducible manuscript that combines
+prose and code. I will highlight the key features of papaja such as YAML
+options and knitting files, citations and references, reporting
+statistical tests, and creating tables and figures. I assume you have a
+basic understanding of using R and R Markdown, so the tutorial can focus
+on demonstrating what papaja can offer for preparing reproducible APA
+style manuscripts.</p>
+[Note from Dale Barr, the organizer: In-person participation is strongly
+encouraged. If you need to participate in this session remotely, please
+contact me by email or Teams DM. Please arrive promptly. To ensure all
+participants are mutually aware of who is attending, the meeting will be
+locked at 12:05 and remote participants will be asked to turn their
+cameras on temporarily so that they can be greeted and welcomed into the
+discussion.]
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Nov 16, 2022<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 6, Meeting Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Alistair Beith<br>University of Glasgow
+</td>
+<td style="text-align:left;width: 45%; ">
+Building Online Auditory Experiments with Accurate Reaction Times
+<button>abstract</button>
+<div class="abstract">
+<p>How much trust are you willing to put in the audio equipment that a
+participant uses to take part in your online study? Many experiment
+building tools create studies that perform well in the lab but with no
+way of knowing how they perform in the wild. The solution to this
+problem is not just to improve the performance, but also to measure
+it.</p>
+<p>This tutorial will present a selection of tools for building your own
+auditory experiments with jsPsych and measuring the timing accuracy of
+responses. With these tools you can present auditory stimuli with sample
+level precision and collect responses with well defined errors. No
+knowledge of jsPsych or participation is required.</p>
+[Note from Dale Barr, the organizer: In-person participation is strongly
+encouraged. If you need to participate in this session remotely, please
+contact me by email or Teams DM.]
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Nov 09, 2022<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 20%; ">
+Elaine Jackson and Martin Lages<br>
+</td>
+<td style="text-align:left;width: 45%; ">
+A Meta-Analysis on Juror Decisions <button>abstract</button>
+<div class="abstract">
+We are interested in whether the English verdict system (guilty/not
+guilty) and Scottish verdict system (guilty/not proven/not guilty)
+affects conviction rates as reported in ten studies with different crime
+types (e.g., murder, assault, rape) and a total of 1,986 jurors. The
+results of a logistic regression with mixed effects suggest a
+significant decrease of convictions for the Scottish compared to the
+English verdict system. We discuss some implications of this result.
+</div>
+</td>
+<td style="text-align:left;width: 20%; ">
+Wed, Nov 02, 2022<br>12:00-13:00
+</td>
+<td style="text-align:left;width: 15%; ">
+Level 5, Seminar Room
+</td>
+</tr>
 <tr>
 <td style="text-align:left;width: 20%; ">
 <a href="https://github.com/code-check-club">Lisa

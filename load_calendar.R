@@ -161,6 +161,7 @@ schedule <- jdf %>%
   mutate(Speaker = paste0(Speaker, "<br>", speaker_affiliation)) %>%
   mutate(abstract = ifelse(abstract == "", "", paste0(" <button>abstract</button><div class='abstract'>",abstract, "</div>"))) %>%
   mutate(Title = paste0(title, " ", resources, " ", abstract)) %>%
+  mutate(Title = gsub("\n---\n", "\n-------\n", Title, fixed = TRUE)) %>%
   #separate(start, c("Date", "start"), sep = "T") %>%
   #separate(end, c("x", "end"), sep = "T") %>%
   mutate(`Date/Time` = paste0(sf(start), "<br>", tm(start), "-", tm(end))) %>%
