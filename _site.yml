@@ -13,8 +13,6 @@ output:
 navbar:
   title: "Methods & Meta-science"
   left:
-    - text: "Coding Club"
-      href: coding_club.html
     - text: "GLMM"
       href: glmm.html
   right:
